@@ -394,6 +394,7 @@ label {
   margin: 2px 2px;
   cursor: pointer;
 }
+
 .page-footer {
   width: auto;
   height: auto;
@@ -405,10 +406,6 @@ label {
   cursor: pointer;
   text-align: center;
 }
-.footer a:hover {
-  cursor: pointer;
-  color: #fff;
-}
 .page-footer p {
   font-style: normal;
   font-size: 16px;
@@ -416,6 +413,10 @@ label {
 }
 .page-footer a {
   color: #fff;
+}
+.page-footer a:hover {
+  background-color: #fff;
+  color: #3d4f73;
 }
 
 @media only screen and (max-width: 1023.75px) {
