@@ -52,43 +52,29 @@
 
     <main class="page-content">
       <div class="form-container">
-        <form id="form1" method="post" action="https://cs12.net/form/submit.php">
+        <form id="contactForm" method="post" action="https://cs12.net/form/submit.php">
           <div class="form-group">
-            <p><h1></h1> </p>
-            <label
-              >First Name
-              <input type="text" name="firstname" required class="form-control" />
-            </label>
-            <label
-              >Last Name
-              <input type="text" name="lastname" required class="form-control" />
-            </label>
-            <label
-              >Organization (type NA if not applicable)
-              <input
-                type="text"
-                name="organization"
-                required
-                class="form-control"
-              />
-            </label>
-            <label
-              >Email
-              <input type="text" name="email" required class="form-control" />
-            </label>
-            <label
-              >Comments/Reason for Contact
-              <textarea
-                rows="10"
-                cols="50"
-                name="comments"
-                required
-                class="form-control"
-              ></textarea>
-            </label>
+            <label for="fieldFirstName">First Name</label>
+            <input id="fieldFirstName" type="text" name="firstname" class="form-control" required />
           </div>
           <div class="form-group">
-            <input type="submit" class="btn" />
+            <label for="fieldLastName">Last Name</label>
+            <input id="fieldLastName" type="text" name="lastname" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="fieldOrganization">Organization (type NA if not applicable)</label>
+            <input id="fieldOrganization" type="text" name="organization" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="fieldEmail">Email</label>
+            <input id="fieldEmail" type="text" name="email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="fieldComments">Comments/Reason for Contact</label>
+            <textarea id="fieldComments" rows="10" cols="40" name="comments" class="form-control" required></textarea>
+          </div>
+          <div class="form-group form-buttons">
+            <input id="formSubmit" type="submit" class="button button-border" />
           </div>
         </form>
       </div>    

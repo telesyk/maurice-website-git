@@ -7,7 +7,5 @@ mobileMenuButton.addEventListener('click', handleMobileMenu);
 
 function handleMobileMenu(event) {
   event.preventDefault();
-  console.log(event);
-  
   navbarElement.classList.toggle('is-active');
 }
