@@ -4,8 +4,8 @@
   --color-white: #fff;
   --color-dark: #1B2333;
   --color-lightgray: #a7adc121;
-  --color-danger: #dc1d34;
-  --color-success: #59d96e;
+  --color-danger: #bf6872;
+  --color-success: #178a55;
   --basic-transition-property: all;
   --basic-transition-function: ease-in-out;
   --basic-transition-duration: 0.15s;
@@ -153,11 +153,24 @@ label {
 .form-group .form-control {
   width: 100%;
 }
-.has-success .form-control {
-  border-color: var(--color-success);
+.has-success {
+  /* --form-control-bborder-color: var(--color-success); */
+  position: relative;
+}
+.has-success::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  transform: rotate(-45deg);
+  width: 10px;
+  height: 6px;
+  border-bottom: 2px solid var(--color-success);
+  border-left: 2px solid var(--color-success);
 }
 .has-danger .form-control {
-  border-color: var(--color-danger);
+  --form-control-bborder-color: var(--color-danger);
 }
 /* END Forms */
 
@@ -166,6 +179,7 @@ label {
   width: 100%;
   position: fixed;
   background-color: var(--color-primary);
+  z-index: 1;
 }
 .homepage .page-header {
   background-color: var(--color-white);
@@ -206,7 +220,7 @@ label {
   gap: 1rem;
   padding: 1rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .navbar-brand {
   padding: 0;
