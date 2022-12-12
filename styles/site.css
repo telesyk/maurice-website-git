@@ -34,13 +34,25 @@ body {
 .homepage .page-header {
   background-color: #fff;
 }
-.page-header__brand-image {
+.page-header__title-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 500px;
   height: 200px;
   padding-bottom: 20px;
+}
+.page-header__title-description {
+  margin-left: 0%;
+  padding: 20px;
+  display: block;
+  color: #3d4f73;
+  background-color: #3d4f73;
+  font-weight: 100;
+  font-size: larger;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 }
 
 /* Navbar */
@@ -143,19 +155,6 @@ body {
   height: 150px;
   padding-top: 0.0001rem;
   padding-bottom: 1rem;
-}
-
-.connect {
-  margin-left: 0%;
-  padding: 20px;
-  display: block;
-  color: #3d4f73;
-  background-color: #3d4f73;
-  font-weight: 100;
-  font-size: larger;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
 }
 
 

@@ -10,32 +10,44 @@
   </head>
 
   <body>
-  
-    <header>
-      <nav>
-        <ul class="container">
-          <h1>
-            <img
-              src="images/pages_logo.svg"
-              alt="mauriceEmelu_Logo"
-              class="logo"
-            />
-          </h1>
-          <li class="item"><a href="index.html">Home</a></li>
-          <li class="item"><a href="about.html">About</a></li>
-          <li class="item"><a href="teaching.html">Teaching</a></li>
-          <li class="item"><a href="research.html">Research</a></li>
-          <li class="item"><a href="service.html">Service</a></li>
-          <li class="item"><a href="contact.html">Contact</a></li>
-          <input type="text" placeholder="Search.." />
+    <header class="page-header">
+      <nav class="navbar">
+        <h1 class="navbar-brand">
+          <img src="images/pages_logo.svg" alt="mauriceEmelu Logo" class="navbar-logo" />
+        </h1>
+        <button type="button" class="navbar-mobile-menu" id="hamburger-menu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span aria-hidden="true" hidden>Menu</span>
+        </button>
+        <ul class="navbar-menu">
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="index.html">Home</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="about.html">About</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="teaching.html">Teaching</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="research.html">Research</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="service.html">Service</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="contact.html">Contact</a>
+          </li>
         </ul>
+        <div class="navbar-search-container">
+          <input class="navbar-search" type="text" placeholder="Search.." />
+        </div>
       </nav>
-    
-    <div> <img
-    src="images/teaching_page.svg"
-    alt="maurieemelu_courses"
-    class="pagetitle" />
-  </div>
+      <div class="page-header__title">
+        <img src="images/teaching_page.svg" alt="maurieemelu_courses" class="page-header__title-image">
+      </div>
     </header>
 
     <main>
