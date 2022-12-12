@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Dr. Maurice Emelu Contact</title>
     <link rel="stylesheet" href="styles/site.css" />
-    <script src="https://cdn.jsdelivr.net/npm/pristinejs@0.1.9/dist/pristine.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/pristinejs@0.1.9/dist/pristine.min.js"></script>
   </head>
 
   <body>
@@ -56,18 +56,22 @@
           <div class="form-group">
             <label for="fieldFirstName">First Name</label>
             <input id="fieldFirstName" type="text" name="firstname" class="form-control" required />
+            <input type="text" hidden />
           </div>
           <div class="form-group">
             <label for="fieldLastName">Last Name</label>
             <input id="fieldLastName" type="text" name="lastname" class="form-control" required />
+            <input type="text" hidden />
           </div>
           <div class="form-group">
             <label for="fieldOrganization">Organization (type NA if not applicable)</label>
             <input id="fieldOrganization" type="text" name="organization" class="form-control" required />
+            <input type="text" hidden />
           </div>
           <div class="form-group">
             <label for="fieldEmail">Email</label>
             <input id="fieldEmail" type="text" name="email" class="form-control" required />
+            <input type="text" hidden />
           </div>
           <div class="form-group">
             <label for="fieldComments">Comments/Reason for Contact</label>
@@ -77,6 +81,7 @@
             <input id="formSubmit" type="submit" class="button button-border" />
           </div>
         </form>
+        <div id="formStatus"></div>
       </div>    
     </main>
 
@@ -96,6 +101,6 @@
     </footer>
     
     <!-- All the JavaScript functionality -->
-    <script src="script/index.js"></script>
+    <script type="module" src="script/index.js"></script>
   </body>
 </html>
