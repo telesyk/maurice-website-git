@@ -1,6 +1,7 @@
 :root {
   --color-primary: #3d4f73;
   --color-white: #fff;
+  --page-content-padding-top: 27rem;
   --navbar-mobile-menu-display: block;
   --navbar-mobile-menu-size: 35px;
   --navbar-menu-mobile-size: 75vw;
@@ -8,6 +9,7 @@
   --navbar-menu-position: absolute;
   --navbar-menu-position-x: calc(-1 * var(--navbar-menu-mobile-size));
   --navbar-menu-item-padding: 10px 50px;
+  --navbar-menu-item-color: var(--color-primary);
   --navbar-search-field-width: 100%;
 }
 
@@ -214,9 +216,12 @@ label {
   display: block;
   width: var(--navbar-mobile-menu-size);
   height: 3px;
-  background-color: var(--color-primary);
+  background-color: var(--color-white);
   margin: 6px 0;
   transition: 0.4s;
+}
+.homepage .navbar-mobile-menu .line {
+  background-color: var(--color-primary);
 }
 .navbar.is-active .line:nth-child(1) {
   -webkit-transform: rotate(-45deg) translate(-6px, 6px);
@@ -248,15 +253,11 @@ label {
 .navbar-menu-link {
   display: block;
   padding: var(--navbar-menu-item-padding);
-  color: var(--color-white);
+  color: var(--navbar-menu-item-color);
   font-weight: 100;
   font-size: large;
   text-transform: uppercase;
   text-decoration: none;
-}
-.homepage .navbar-menu-link {
-  color: var(--color-primary);
-  font-weight: 500;
 }
 /* END Navbar Menu */
 
@@ -331,6 +332,14 @@ label {
   padding: 1rem;
 }
 
+.page-content {
+  padding-top: var(--page-content-padding-top);
+}
+
+.homepage .page-content {
+  --page-content-padding-top: 33rem;
+}
+
 /* Homepage */
 .homepage .section {
   background-color: var(--color-primary);
@@ -362,10 +371,6 @@ div.news h1 {
   color: var(--color-primary);
   padding: 0px 0 0 100px;
   font-size: large;
-}
-
-.newsroll {
-  margin-top: 445px;
 }
 
 /* Page Footer */
@@ -428,7 +433,14 @@ div.news h1 {
     --navbar-menu-position: inherit;
     --navbar-menu-visibility: 1;
     --navbar-menu-item-padding: 10px 20px;
+    --navbar-menu-item-color: var(--color-white);
     --navbar-search-field-width: auto;
+  }
+  .homepage {
+    --navbar-menu-item-color: var(--color-primary);
+  }
+  .homepage .navbar-menu-link {
+    font-weight: 500;
   }
 }
 
