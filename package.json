@@ -1,4 +1,17 @@
 {
+  "name": "maurice-website-git",
+  "description": "",
+  "version": "1.0.0",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --dist-dir build",
+    "test": "echo This is a static template, there is no bundler or bundling involved!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telesyk/maurice-website-git"
+  },
   "devDependencies": {
     "parcel": "^2.8.1"
   }
