@@ -1,6 +1,14 @@
 :root {
   --color-primary: #3d4f73;
+  --color-secondary: #6583BF;
   --color-white: #fff;
+  --color-dark: #1B2333;
+  --color-lightgray: #a7adc121;
+  --color-danger: #dc1d34;
+  --color-success: #59d96e;
+  --basic-transition-property: all;
+  --basic-transition-function: ease-in-out;
+  --basic-transition-duration: 0.15s;
   --page-content-padding-top: 27rem;
   --navbar-mobile-menu-display: block;
   --navbar-mobile-menu-size: 35px;
@@ -12,6 +20,7 @@
   --navbar-menu-item-color: var(--color-primary);
   --navbar-menu-item-color-bg: transparent;
   --navbar-search-field-width: 100%;
+  --form-control-bborder-color: var(--color-primary);
 }
 
 /* Defaults */
@@ -59,7 +68,7 @@ h6 {
 }
 p {
   padding: 1rem 0rem 0rem 1rem;
-  color: #1B2333;
+  color: var(--color-dark);
   font-size: large;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -68,13 +77,7 @@ p {
 }
 a {
   text-decoration: none;
-  color: #6583BF;
-  font-weight: 200;
   cursor: pointer;
-}
-a:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary);
 }
 /* END Defaults */
 
@@ -90,7 +93,9 @@ a:hover {
   font-size: 16px;
   margin: 2px 2px;
   cursor: pointer;
-  transition: all ease-in-out 0.15s;
+  transition-property: var(--basic-transition-property);
+  transition-timing-function: var(--basic-transition-function);
+  transition-duration: var(--basic-transition-duration);
 }
 .button-more {
   background-color: var(--color-white);
@@ -130,33 +135,29 @@ a:hover {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--color-primary);
   font-size: 16px;
-  font-weight: 10px;
+  color: var(--color-primary);
 }
 .form-control {
   padding: 10px 20px 10px 20px;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--form-control-bborder-color);
   font-size: 16px;
   outline: none;
+  transition-property: var(--basic-transition-property);
+  transition-timing-function: var(--basic-transition-function);
+  transition-duration: var(--basic-transition-duration);
+}
+.form-control:focus {
+  --form-control-bborder-color: var(--color-secondary);
 }
 .form-group .form-control {
   width: 100%;
 }
 .has-success .form-control {
-  border-bottom: 2px solid #d99559;
+  border-color: var(--color-success);
 }
 .has-danger .form-control {
-  border-bottom: 2px solid #dc1d34;
-}
-.form-group .text-help {
-  color: #dc1d34;
-}
-.inline-label label {
-  display: inline;
-}
-.pristine-error {
-  display: table;
+  border-color: var(--color-danger);
 }
 /* END Forms */
 
@@ -191,6 +192,7 @@ label {
 }
 .page-header__title-description a {
   color: var(--color-white);
+  background-color: transparent;
 }
 
 /* Navbar */
@@ -262,7 +264,9 @@ label {
   list-style: none;
   position: var(--navbar-menu-position);
   z-index: 99;
-  transition: all ease-in-out .25s;
+  transition-property: var(--basic-transition-property);
+  transition-timing-function: var(--basic-transition-function);
+  transition-duration: var(--basic-transition-duration);
 }
 .navbar-menu-item {
   text-align: right;
@@ -276,7 +280,9 @@ a.navbar-menu-link {
   font-size: large;
   text-transform: uppercase;
   text-decoration: none;
-  transition: all ease-in-out 0.15s;
+  transition-property: var(--basic-transition-property);
+  transition-timing-function: var(--basic-transition-function);
+  transition-duration: var(--basic-transition-duration);
 }
 a.navbar-menu-link:hover {
   --navbar-menu-item-color: var(--color-white);
@@ -313,21 +319,34 @@ a.navbar-menu-link:hover {
 .learn-more p {
   color: var(--color-white);
 }
+.homepage .learn-more .button-more,
+.learn-more .button-more {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+}
+.learn-more .button-more:hover {
+  color: var(--color-white);
+  background-color: transparent;
+  border-color: var(--color-white);
+}
 .homepage .learn-more {
   text-align: left;
-}
-.homepage .learn-more .button-more {
-  color: var(--color-primary)
-}
-.homepage .learn-more .button-more:hover {
-  color: var(--color-white)
 }
 /* END Learn-more */
 
 .section {
-  background-color: #a7adc121;
+  background-color: var(--color-lightgray);
   margin-bottom: 1rem;
   padding: 1rem;
+}
+.section a,
+.section a {
+  color: var(--color-secondary);
+}
+.section a:hover,
+.section a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-white);
 }
 
 .page-content {
@@ -349,19 +368,17 @@ a.navbar-menu-link:hover {
   padding: 50px;
 }
 .homepage p,
-.homepage .section a {
+.homepage .section a,
+.homepage .section a:hover {
   color: var(--color-white);
-}
-.section a:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: transparent;
 }
 /* END Homepage */
 
 div.news {
   float: left;
   width: 100%;
-  background-color: #6583BF;
+  background-color: var(--color-secondary);
 }
 
 div.news h1 {
