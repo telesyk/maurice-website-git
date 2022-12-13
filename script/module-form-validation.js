@@ -54,20 +54,14 @@ export default function formValidation() {
   }
 
   function getFormData() {
-    const formData = [];
-    formControls.forEach(field => {
-      const newData = {
-        name: field.name,
-        value: field.value.trim(),
-      };
-      formData.push(newData);
-    });
+    const formData = {};
+    formControls.forEach(field => formData[field.name] = field.value.trim());
     return formData;
   }
 
   function validEmail(value) {
     const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const isValid = value.match(validRegex) ? true : false;
+    const isValid = value && value.match(validRegex) ? true : false;
     if (!isValid) {
       let emailElement;
       formControls.forEach(field => {
@@ -87,6 +81,22 @@ export default function formValidation() {
       field.closest(SELECTOR.formGroup).classList.remove(SELECTOR.formSuccess);
     });
   }
+
+  function sendEmail(emailData) {
+    emailjs.send('service_55ll7kj','template_xclhllr', emailData)
+      .then(function(response) {
+        if (response.status === 200 && response.text === 'OK') {
+          // const allFields = formContacts.querySelectorAll('.form-control');
+          // allFields.forEach(field => field.value = '');
+          // formStatus.textContent = 'Message successfully sent!';
+          updateFormStatus('Successfully sent!', 'success');
+          clearForm();
+          setTimeout(() => updateFormStatus(''), 7000);
+        }
+      }, function(err) {
+        console.error('FAILED...', err);
+      });
+  }
   
   function handleSubmitForm(e) {
     e.preventDefault();
@@ -94,19 +104,14 @@ export default function formValidation() {
     const formData = getFormData();
     const isRequired = isRequiredData();
     const isHiddenEmpty = isHiddenData();
-    const emailData = formData.find(item => item.name === 'email');
-    const isValidEmail = validEmail(emailData.value);
+    const isValidEmail = validEmail(formData.email);
 
     if (!isRequired) updateFormStatus('There is some empty field!', 'error');
     if (!isValidEmail) updateFormStatus('Email is not valid', 'error');
 
     if (isRequired && isHiddenEmpty && isValidEmail) {
       console.log(formData);
-      updateFormStatus('Successfully sent!', 'success');
-      clearForm();
-      setTimeout(() => {
-        updateFormStatus('');
-      }, 10000);
+      sendEmail(formData);
     }
   }
   

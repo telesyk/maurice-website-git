@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Dr. Maurice Emelu Contact</title>
     <link rel="stylesheet" href="styles/site.css" />
-    <script type="module" src="https://cdn.jsdelivr.net/npm/pristinejs@0.1.9/dist/pristine.min.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/pristinejs@0.1.9/dist/pristine.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("GfqTG6qKrSGn0pk4a");
+      })();
+    </script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
   </head>
 
   <body>
@@ -52,7 +59,7 @@
 
     <main class="page-content">
       <div class="form-container">
-        <form id="contactForm" method="post" action="https://cs12.net/form/submit.php">
+        <form id="contactForm">
           <div class="form-group">
             <label for="fieldFirstName">First Name</label>
             <input id="fieldFirstName" type="text" name="firstname" class="form-control" required />
@@ -78,13 +85,13 @@
             <textarea id="fieldComments" rows="10" cols="40" name="comments" class="form-control" required></textarea>
           </div>
           <div class="form-group form-buttons">
-            <input id="formSubmit" type="submit" class="button button-border" />
+            <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+            <button id="formSubmit" type="submit" class="button button-border">Submit</button>
           </div>
         </form>
         <div id="formStatus"></div>
       </div>    
     </main>
-
 
     <footer class="page-footer">
       <p>
