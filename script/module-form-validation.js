@@ -86,9 +86,6 @@ export default function formValidation() {
     emailjs.send('service_55ll7kj','template_xclhllr', emailData)
       .then(function(response) {
         if (response.status === 200 && response.text === 'OK') {
-          // const allFields = formContacts.querySelectorAll('.form-control');
-          // allFields.forEach(field => field.value = '');
-          // formStatus.textContent = 'Message successfully sent!';
           updateFormStatus('Successfully sent!', 'success');
           clearForm();
           setTimeout(() => updateFormStatus(''), 7000);
