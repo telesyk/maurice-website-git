@@ -10,6 +10,7 @@
   --basic-transition-function: ease-in-out;
   --basic-transition-duration: 0.15s;
   --page-content-padding-top: 27rem;
+  --section-embed-margin: 0 -1rem;
   --navbar-mobile-menu-display: block;
   --navbar-mobile-menu-size: 35px;
   --navbar-menu-mobile-size: 75vw;
@@ -38,10 +39,11 @@ main {
   padding: 5%;
 }
 embed {
-  margin: auto;
   display: block;
-  width: 50%;
   height: 1600px;
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
   padding: none;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
@@ -49,13 +51,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 h1 {
-  padding: 1rem 1rem 0 1rem;
+  /* padding: 1rem 1rem 0 1rem; */
   transform: none;
   text-align: center;
 }
 h2 {
   color: var(--color-white);
-  padding: 1rem 0rem 0 1rem;
+  /* padding: 1rem 0rem 0 1rem; */
   font-size: larger;
 }
 h3,
@@ -63,17 +65,17 @@ h4,
 h5,
 h6 {
   color: var(--color-white);
-  padding: 1rem 0rem 0 1rem;
+  /* padding: 1rem 0rem 0 1rem; */
   font-size: large;
 }
 p {
-  padding: 1rem 0rem 0rem 1rem;
+  /* padding: 1rem 0rem 0rem 1rem; */
   color: var(--color-dark);
   font-size: large;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 100;
-  line-height: 2rem;
+  line-height: 1.75;
 }
 a {
   text-decoration: none;
@@ -338,7 +340,7 @@ a.navbar-menu-link:hover {
   background-color: var(--color-primary);
   border: none;
   color: var(--color-white);
-  padding: 0px 20px 20px 0px;
+  padding: 1.25rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -346,6 +348,7 @@ a.navbar-menu-link:hover {
 }
 .learn-more p {
   color: var(--color-white);
+  margin: 0;
 }
 .homepage .learn-more .button-more,
 .learn-more .button-more {
@@ -367,6 +370,9 @@ a.navbar-menu-link:hover {
   margin-bottom: 1rem;
   padding: 1rem;
 }
+.section p {
+  margin-bottom: 1.75rem;
+}
 .section a,
 .section a {
   color: var(--color-secondary);
@@ -375,6 +381,20 @@ a.navbar-menu-link:hover {
 .section a:hover {
   color: var(--color-primary);
   background-color: var(--color-white);
+}
+.section h1,
+.section h2 {
+  margin-bottom: 2rem;
+}
+.section-article {
+  padding: 1.25rem;
+}
+.section-article .learn-more {
+  margin: 1rem 0 0 -1rem;
+}
+.section-embed {
+  margin: var(--section-embed-margin);
+  padding: 1rem 0;
 }
 
 .page-content {
@@ -469,6 +489,11 @@ div.news h1 {
   }
 }
 
+@media only screen and (min-width: 480px) {
+  :root {
+    --section-embed-margin: 0;
+  }
+}
 @media only screen and (min-width: 1024px) {
   :root {
     --navbar-mobile-menu-display: none;
