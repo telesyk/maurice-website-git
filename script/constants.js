@@ -12,3 +12,11 @@ export const SELECTOR = {
   formSubmit: 'formSubmit',
   formStatus: 'formStatus',
 };
+
+export const EMAIL = {
+  serviceId: 'service_55ll7kj',
+  templateId: 'template_xclhllr',
+  emptyFieldMessage: 'There is some empty field!',
+  invalidEmailMessage: 'Email is not valid',
+  successMessage: 'Successfully sent!',
+};

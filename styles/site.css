@@ -5,7 +5,7 @@
   --color-dark: #1B2333;
   --color-lightgray: #a7adc121;
   --color-danger: #bf6872;
-  --color-success: #178a55;
+  --color-success: #659981;
   --basic-transition-property: all;
   --basic-transition-function: ease-in-out;
   --basic-transition-duration: 0.15s;
@@ -185,11 +185,15 @@ label {
   transform: rotate(-45deg);
   width: 10px;
   height: 6px;
+  opacity: 0.75;
   border-bottom: 2px solid var(--color-success);
   border-left: 2px solid var(--color-success);
 }
 .form-group.has-danger .form-control {
   --form-control-border-color: var(--color-danger);
+}
+.form-group.has-success .form-control {
+  --form-control-border-color: var(--color-success);
 }
 /* END Forms */
 

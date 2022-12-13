@@ -1,4 +1,4 @@
-import { SELECTOR } from "./constants";
+import { SELECTOR, EMAIL } from "./constants";
 
 export default function formValidation() {
   const contactForm = document.getElementById(SELECTOR.contactForm);
@@ -82,11 +82,11 @@ export default function formValidation() {
     });
   }
 
-  function sendEmail(emailData) {
-    emailjs.send('service_55ll7kj','template_xclhllr', emailData)
+  function sendEmail(templateParams) {
+    emailjs.send(EMAIL.serviceId, EMAIL.templateId, templateParams)
       .then(function(response) {
         if (response.status === 200 && response.text === 'OK') {
-          updateFormStatus('Successfully sent!', 'success');
+          updateFormStatus(EMAIL.successMessage, 'success');
           clearForm();
           setTimeout(() => updateFormStatus(''), 7000);
         }
@@ -103,13 +103,10 @@ export default function formValidation() {
     const isHiddenEmpty = isHiddenData();
     const isValidEmail = validEmail(formData.email);
 
-    if (!isRequired) updateFormStatus('There is some empty field!', 'error');
-    if (!isValidEmail) updateFormStatus('Email is not valid', 'error');
+    if (!isRequired) updateFormStatus(EMAIL.emptyFieldMessage, 'error');
+    if (!isValidEmail) updateFormStatus(EMAIL.invalidEmailMessage, 'error');
 
-    if (isRequired && isHiddenEmpty && isValidEmail) {
-      console.log(formData);
-      sendEmail(formData);
-    }
+    if (isRequired && isHiddenEmpty && isValidEmail) sendEmail(formData);
   }
   
   if (formSubmitButton) {
