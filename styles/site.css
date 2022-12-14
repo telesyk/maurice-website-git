@@ -9,6 +9,7 @@
   --basic-transition-property: all;
   --basic-transition-function: ease-in-out;
   --basic-transition-duration: 0.15s;
+  --size-max-width-desktop: 1440px;
   --header-height: 137.5px;
   --page-content-padding-top: var(--header-height);
   --footer-flex-direction: column;
@@ -210,34 +211,10 @@ label {
 .homepage .page-header {
   background-color: var(--color-white);
 }
-.page-header__title-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-  height: 200px;
-  padding-bottom: 20px;
-}
-.page-header__title-description {
-  display: block;
-  margin-left: 0;
-  padding: 20px;
-  color: var(--color-primary);
-  background-color: var(--color-primary);
-  font-weight: 100;
-  font-size: larger;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-}
-.page-header__title-description a {
-  color: var(--color-white);
-  background-color: transparent;
-}
 
 /* Navbar */
 .navbar {
-  max-width: 1440px;
+  max-width: var(--size-max-width-desktop);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -394,19 +371,48 @@ a.navbar-menu-link:hover {
   padding: 1rem 0;
 }
 
+/* Page Content */
+.page-container {
+  max-width: var(--size-max-width-desktop);
+  padding-top: 2rem;
+  margin: 0 auto;
+}
 .page-content {
   padding-top: var(--page-content-padding-top);
 }
+.page-content__title-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 200px;
+  padding-bottom: 20px;
+}
+body:not(.homepage) .page-content__title-image {
+  /* temporaly */
+  filter: invert(0.75);
+}
+.page-content__title-description {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 20px;
+  color: var(--color-primary);
+  background-color: var(--color-primary);
+  font-weight: 100;
+  font-size: larger;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+.page-content__title-description a {
+  color: var(--color-white);
+  background-color: transparent;
+}
+/* END Page Content */
 
 /* Homepage */
 .homepage .section {
   background-color: var(--color-primary);
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 1rem;
-}
-.homepage .section .newsroll {
-  margin-top: 200px;
-  padding: 50px;
 }
 .homepage p,
 .homepage .section a,
