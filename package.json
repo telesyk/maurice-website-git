@@ -5,7 +5,7 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --dist-dir build",
+    "build": "parcel build --no-optimize --dist-dir build",
     "test": "echo This is a static template, there is no bundler or bundling involved!"
   },
   "repository": {
