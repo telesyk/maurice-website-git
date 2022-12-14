@@ -87,7 +87,7 @@ a {
 /* END Defaults */
 
 .is-hidden {
-  display: none;
+  display: none !important;
   opacity: 0;
   visibility: hidden;
 }
@@ -407,6 +407,7 @@ body:not(.homepage) .page-content__title-image {
 .page-content__title-description a {
   color: var(--color-white);
   background-color: transparent;
+  line-height: 2;
 }
 /* END Page Content */
 
