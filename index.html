@@ -41,20 +41,17 @@
           <a class="navbar-menu-link" href="contact.html">Contact</a>
         </li>
       </ul>
-      <div class="navbar-search">
-        <input class="form-control navbar-search-field" type="text" placeholder="Search.." />
-      </div>
     </nav>
-    <div class="page-header__title">
-      <img src="images/title.svg" alt="mauricemelusitetitle" class="page-header__title-image" />
-      <div class="page-header__title-description"><a href="contact.html">Helping You Tell Compeling Brand Stories. <br>
-          <br> Let's Connect</a>
-      </div>
-    </div>
   </header>
 
   <main class="page-content">
     <div class="newsroll">
+      <div class="page-header__title">
+        <img src="images/title.svg" alt="mauricemelusitetitle" class="page-header__title-image" />
+        <div class="page-header__title-description"><a href="contact.html">Helping You Tell Compeling Brand Stories. <br>
+            <br> Let's Connect</a>
+        </div>
+      </div>
       <section class="section">
         <article class="section-article">
           <h2>
@@ -137,16 +134,23 @@
   </main>
 
   <footer class="page-footer">
-    <p>
-      News, articles, and creative works from
-      <a href="research.html">Dr. Maurice Emelu RSS are regularly updated on Research page</a>
-    </p>
-    <p>
-      © 2022 Maurice Emelu <br />
-      Academic correspondences, please email <a href="mailto:memelu@jcu.edu">memelu@jcu.edu</a>. Other inquiries, please
-      fill the <a href="contact.html"> Contact Form</a>
-    </p>
-    <p>Terms and Privacy Policies</p>
+    <div class="page-footer__search search-form">
+      <label for="searchForm">
+        <input id="searchForm" class="form-control search-form-field" type="text" placeholder="Search.." />
+      </label>
+    </div>
+    <div class="page-footer__copyright">
+      <p>
+        News, articles, and creative works from
+        <a href="research.html">Dr. Maurice Emelu RSS are regularly updated on Research page</a>
+      </p>
+      <p>
+        © 2022 Maurice Emelu <br />
+        Academic correspondences, please email <a href="mailto:memelu@jcu.edu">memelu@jcu.edu</a>. Other inquiries, please
+        fill the <a href="contact.html"> Contact Form</a>
+      </p>
+      <p>Terms and Privacy Policies</p>
+    </div>
   </footer>
   <!-- All the JavaScript functionality -->
   <script type="module" src="script/index.js"></script>
