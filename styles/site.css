@@ -465,6 +465,9 @@ div.news h1 {
 .search-form {
   width: 100%;
 }
+.search-form-label {
+  display: none;
+}
 .search-form-field {
   width: var(--search-form-field-width);
 }
@@ -546,6 +549,7 @@ div.news h1 {
     flex: 0 0 40%;
     display: flex;
     justify-content: start;
+    align-items: start;
   }
   .page-footer__copyright {
     flex: 0 0 60%;
