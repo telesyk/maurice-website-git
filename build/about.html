@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Dr. Maurice Emelu About</title>
-  <link rel="stylesheet" href="styles/index.2522c0e8.css">
+  <link rel="stylesheet" href="styles/index.f8e90deb.css">
 </head>
 
 <body>
@@ -41,17 +41,14 @@
           <a class="navbar-menu-link" href="contact.html">Contact</a>
         </li>
       </ul>
-      <div class="navbar-search">
-        <input class="form-control navbar-search-field" type="text" placeholder="Search..">
-      </div>
     </nav>
-    <div class="page-header__title">
-      <img src="images/about_page.c6ce2df5.svg" alt="maurieemelu_courses" class="page-header__title-image">
-    </div>
   </header>
 
   <main class="page-content">
-    <div class="newsroll">
+    <div class="page-container">
+      <div class="page-content__title">
+        <img src="images/about_page.c6ce2df5.svg" alt="maurieemelu_courses" class="page-content__title-image">
+      </div>
       <section class="section">
         <article class="section-article">
           <h1>
@@ -119,8 +116,7 @@
             <a href="#">Curriculum Vitae</a>
           </h1>
           <div class="section-embed">
-            <embed
-              src="https://docs.google.com/document/d/e/2PACX-1vRCn3QTktY11fO15CYsgk4fAcjH-IW1dLImNCrsO0vMkLjvG5w5E4RHw7NMRnTwvQ/pub?embedded=true">
+            <embed src="https://docs.google.com/document/d/e/2PACX-1vRCn3QTktY11fO15CYsgk4fAcjH-IW1dLImNCrsO0vMkLjvG5w5E4RHw7NMRnTwvQ/pub?embedded=true">
           </div>
         </article>
       </section>
@@ -128,16 +124,22 @@
   </main>
 
   <footer class="page-footer">
-    <p>
-      News, articles, and creative works from
-      <a href="research.html">Dr. Maurice Emelu RSS are regularly updated on Research page</a>
-    </p>
-    <p>
-      © 2022 Maurice Emelu <br>
-      Academic correspondences, please email <a href="mailto:memelu@jcu.edu">memelu@jcu.edu</a>. Other inquiries, please
-      fill the <a href="contact.html"> Contact Form</a>
-    </p>
-    <p>Terms and Privacy Policies</p>
+    <div class="page-footer__search search-form">
+      <label for="searchForm" class="search-form-label" hidden="" aria-hidden="true">Search</label>
+      <input id="searchForm" class="form-control search-form-field" type="text" placeholder="Search..">
+    </div>
+    <div class="page-footer__copyright">
+      <p>
+        News, articles, and creative works from
+        <a href="research.html">Dr. Maurice Emelu RSS are regularly updated on Research page</a>
+      </p>
+      <p>
+        © 2022 Maurice Emelu <br>
+        Academic correspondences, please email <a href="mailto:memelu@jcu.edu">memelu@jcu.edu</a>. Other inquiries, please
+        fill the <a href="contact.html"> Contact Form</a>
+      </p>
+      <p>Terms and Privacy Policies</p>
+    </div>
   </footer>
 
   <!-- All the JavaScript functionality -->
