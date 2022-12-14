@@ -11,6 +11,7 @@ export const SELECTOR = {
   formControlHidden: '[hidden]',
   formSubmit: 'formSubmit',
   formStatus: 'formStatus',
+  searchForm: 'searchForm',
 };
 
 export const EMAIL = {
