@@ -3,7 +3,9 @@
   --color-secondary: #6583BF;
   --color-white: #fff;
   --color-dark: #1B2333;
+  --color-dark-opacity: rgba(0,0,0,0.5);
   --color-lightgray: #a7adc121;
+  --color-lightgrey: #d3dae0;
   --color-danger: #bf6872;
   --color-success: #659981;
   --basic-transition-property: all;
@@ -25,6 +27,9 @@
   --navbar-menu-item-color-bg: transparent;
   --search-form-field-width: 100%;
   --form-control-border-color: var(--color-primary);
+  --modal-z-index: -1;
+  --modal-width: 100%;
+  --modal-height: 100%;
 }
 
 /* Defaults */
@@ -372,13 +377,13 @@ a.navbar-menu-link:hover {
 }
 
 /* Page Content */
+.page-content {
+  padding-top: var(--page-content-padding-top);
+}
 .page-container {
   max-width: var(--size-max-width-desktop);
   padding-top: 2rem;
   margin: 0 auto;
-}
-.page-content {
-  padding-top: var(--page-content-padding-top);
 }
 .page-content__title-image {
   display: block;
@@ -475,6 +480,85 @@ div.news h1 {
 /* END Footer Search */
 /* END Page Footer */
 
+/* Modal Window */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--modal-z-index);
+  background-color: var(--color-dark-opacity);
+  backdrop-filter: blur(10px);
+  transition: all ease .25s;
+  opacity: 0;
+  /* test */
+  /* z-index: 2;
+  opacity: 1; */
+}
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--modal-width);
+  height: var(--modal-height);
+  padding: 2rem;
+  background-color: var(--color-lightgrey);
+  border-radius: 8px;
+}
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.modal-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-primary);
+}
+.modal-header-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: var(--color-dark);
+}
+.modal-body {
+  padding: 1rem 0;
+}
+.modal-body,
+.modal-body p {
+  color: var(--color-dark);
+}
+.modal-close {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.modal-close::before,
+.modal-close::after {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background-color: var(--color-dark);
+  transform-origin: center;
+}
+.modal-close::before {
+  top: 15px;
+  left: 2px;
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  bottom: 15.5px;
+  right: 1px;
+  transform: rotate(-45deg);
+}
+/* END Modal Window */
+
 @media only screen and (max-width: 1023.75px) {
   :root {
     --navbar-menu-visibility: 0;
@@ -510,6 +594,8 @@ div.news h1 {
 @media only screen and (min-width: 640px) {
   :root {
     --footer-flex-direction: row;
+    --modal-width: 480px;
+    --modal-height: 360px;
   }
   .page-footer__search,
   .page-footer__copyright {

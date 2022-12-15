@@ -21,3 +21,15 @@ export const EMAIL = {
   invalidEmailMessage: 'Email is not valid',
   successMessage: 'Successfully sent!',
 };
+
+export const MODAL = {
+  sizes: [
+    {
+      name: 'sm',
+      className: 'modal-small'
+    },{
+      name: 'lg',
+      className: 'modal-large'
+    }
+  ],
+};
