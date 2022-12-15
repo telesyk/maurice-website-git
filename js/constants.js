@@ -29,7 +29,8 @@ export const MODAL = {
     {
       name: 'sm',
       className: 'modal-small'
-    },{
+    },
+    {
       name: 'lg',
       className: 'modal-large'
     }
