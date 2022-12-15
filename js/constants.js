@@ -12,6 +12,7 @@ export const SELECTOR = {
   formSubmit: 'formSubmit',
   formStatus: 'formStatus',
   searchForm: 'searchForm',
+  modalWindowTrigger: 'data-modal-target',
 };
 
 export const EMAIL = {

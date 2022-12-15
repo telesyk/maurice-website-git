@@ -59,13 +59,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 h1 {
-  /* padding: 1rem 1rem 0 1rem; */
   transform: none;
   text-align: center;
 }
 h2 {
   color: var(--color-white);
-  /* padding: 1rem 0rem 0 1rem; */
   font-size: larger;
 }
 h3,
@@ -73,11 +71,9 @@ h4,
 h5,
 h6 {
   color: var(--color-white);
-  /* padding: 1rem 0rem 0 1rem; */
   font-size: large;
 }
 p {
-  /* padding: 1rem 0rem 0rem 1rem; */
   color: var(--color-dark);
   font-size: large;
   font-family: Arial, Helvetica, sans-serif;
@@ -90,6 +86,10 @@ a {
   cursor: pointer;
 }
 /* END Defaults */
+
+[data-modal-target] {
+  cursor: pointer;
+}
 
 .is-hidden {
   display: none !important;
@@ -156,9 +156,6 @@ a {
 .form-buttons {
   display: flex;
   flex-direction: row-reverse;
-  /* flex-direction: row;
-  justify-content: space-between;
-  align-items: center; */
 }
 label {
   display: block;
@@ -498,9 +495,10 @@ div.news h1 {
   backdrop-filter: blur(10px);
   transition: all ease .25s;
   opacity: 0;
-  /* test */
-  /* z-index: 2;
-  opacity: 1; */
+}
+.modal-is-visible {
+  z-index: 999;
+  opacity: 1;
 }
 .modal-container {
   position: absolute;

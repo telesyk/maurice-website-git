@@ -46,14 +46,23 @@ const getWindowTemplate = (bodyTemplate, headerTemplate) => {
   `;
 };
 
-/* Create modal */
-const createModal = (content, modalSize) => {
+/**
+ * Create modal
+ * @param {object} content - can has only two variables headerContent & bodyContent
+ * @param {string} headerContent - content for header
+ * @param {string} bodyContent - content for body
+ * @param {object} restArgs - can has variables modalSize & attributes
+ * @param {string} modalSize - provides a shortant variation of modal size {sm, lg, etc.}
+ * @param {array} attributes - may contains an Objects of attributes for the modal
+ *  */
+const createModal = (content, restArgs) => {
   const { headerContent, bodyContent } = content;
+  const modalSize = restArgs ? restArgs.modalSize : null;
+  const attributes = restArgs ? restArgs.attributes : null;
   
   if (!bodyContent) return console.log('Error! There are no content to show in modal');
 
   const parser = new DOMParser();
-  const fragment = new DocumentFragment();
   const modalClassName = getModalSize(modalSize);
   const headerTemplate = !headerContent ? null : getHeaderTemplate(headerContent);
   const bodyTemplate = getBodyTemplate(bodyContent);
@@ -61,13 +70,19 @@ const createModal = (content, modalSize) => {
   const modalElement = parser.parseFromString(windowTemplate, 'text/html').body.children[0];
   
   modalElement.classList.add(modalClassName);
+
+  if (attributes) {
+    attributes.map(attr => {
+      for (const name in attr) {
+        modalElement.setAttribute(name, attr[name]);
+      }
+    });
+  }
   
   const closeElement = modalElement.querySelector('.modal-close');
   closeElement.addEventListener('click', handleModalVisibility);
 
-  fragment.appendChild(modalElement);
-
-  return document.body.appendChild(fragment);
+  return document.body.appendChild(modalElement);
 };
 
 export default createModal;
