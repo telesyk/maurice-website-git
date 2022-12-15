@@ -13,6 +13,7 @@ export const SELECTOR = {
   formStatus: 'formStatus',
   searchForm: 'searchForm',
   modalWindowTrigger: 'data-modal-target',
+  modalTermsAndPrivacyId: 'modalTermsAndPrivacy',
 };
 
 export const EMAIL = {

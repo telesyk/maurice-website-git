@@ -4,6 +4,7 @@ import formValidation from './module/form-validation';
 import search from './module/search';
 import createModal from './module/create-modal';
 import handleModalVisibility from './helpers/handle-modal-visibility';
+import modalsData from './modals.json';
 
 window.onload = () => {
   /* Mobile Navigation */
@@ -26,12 +27,11 @@ window.onload = () => {
 
   /* test modal */
   const modalContent = {
-    headerContent: 'Test heading',
-    bodyContent: 'Hello, Modal Window!'
+    headerContent: modalsData.modalTermsAndPrivacy.title,
+    bodyContent: modalsData.modalTermsAndPrivacy.description,
   };
   const attrs = [{
-    id: 'modalTermsAndPrivacy',
+    id: SELECTOR.modalTermsAndPrivacyId,
   }];
   const modalTermsAndPrivacy = createModal(modalContent, {attributes: attrs});
-  console.log(modalTermsAndPrivacy);
 };

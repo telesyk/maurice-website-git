@@ -526,7 +526,9 @@ div.news h1 {
   color: var(--color-dark);
 }
 .modal-body {
+  max-height: calc(100% - 65px);
   padding: 1rem 0;
+  overflow-y: auto;
 }
 .modal-body,
 .modal-body p {
