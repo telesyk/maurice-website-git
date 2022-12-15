@@ -1,5 +1,5 @@
-import { MODAL } from './constants';
-import handleModalVisibility from './module-handle-modal-visibility';
+import { MODAL } from '../constants';
+import handleModalVisibility from '../helpers/handle-modal-visibility';
 
 /**
  * Modal Sizes

@@ -1,4 +1,4 @@
-import { SELECTOR, EMAIL } from './constants';
+import { SELECTOR, EMAIL } from '../constants';
 
 export default function formValidation() {
   const contactForm = document.getElementById(SELECTOR.contactForm);

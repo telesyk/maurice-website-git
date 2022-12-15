@@ -1,6 +1,6 @@
 import lunr from 'lunr';
-import { SELECTOR } from './constants';
-import data from './data.json';
+import { SELECTOR } from '../constants';
+import data from '../data.json';
 
 export default function search() {
   console.log('search is here');

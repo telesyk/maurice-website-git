@@ -1,4 +1,4 @@
-import { SELECTOR } from './constants';
+import { SELECTOR } from '../constants';
 
 export default function mobileMenu() {
   const navbarElement = document.querySelector(SELECTOR.navbar);

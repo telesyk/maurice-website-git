@@ -1,8 +1,8 @@
 import { SELECTOR } from './constants';
-import mobileMenu from './module-mobile-menu';
-import formValidation from './module-form-validation';
-import search from './module-search';
-import createModal from './module-create-modal';
+import mobileMenu from './module/mobile-menu';
+import formValidation from './module/form-validation';
+import search from './module/search';
+import createModal from './module/create-modal';
 
 window.onload = () => {
   /* Mobile Navigation */
