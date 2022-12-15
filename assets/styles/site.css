@@ -382,16 +382,23 @@ a.navbar-menu-link:hover {
 }
 .page-container {
   max-width: var(--size-max-width-desktop);
-  padding-top: 2rem;
   margin: 0 auto;
+}
+.page-content {
+  padding-top: var(--page-content-padding-top);
+}
+.page-content__title {
+  padding: 3.5rem 0 4rem;
 }
 .page-content__title-image {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-  height: 200px;
-  padding-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+.homepage .page-content__title-image {
+  margin-bottom: 4rem;
 }
 body:not(.homepage) .page-content__title-image {
   /* temporaly */
@@ -399,7 +406,6 @@ body:not(.homepage) .page-content__title-image {
 }
 .page-content__title-description {
   display: block;
-  margin-bottom: 2rem;
   padding: 20px;
   color: var(--color-primary);
   background-color: var(--color-primary);
