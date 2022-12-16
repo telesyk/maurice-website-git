@@ -9,6 +9,7 @@ export default function search() {
   function searchParams(param) {
     const idx = lunr(function () {
       this.ref('name');
+      this.field('name');
       this.field('text');
     
       data.forEach(function (doc) {
@@ -20,9 +21,10 @@ export default function search() {
   }
 
   function handleSearchForm(event) {
-    console.debug(event);
+    const { target } = event;
+    // console.debug(target.value);
     // console.debug('press Enter');
-    console.log(searchParams('JavaScript'));
+    console.log(searchParams(target.value));
   };
 
   searchFormElement.addEventListener('input', handleSearchForm);
