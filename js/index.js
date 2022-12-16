@@ -1,5 +1,5 @@
 import { SELECTOR } from './constants';
-import modalsData from './modals.json';
+import modalsJson from './modals.json';
 import mobileMenu from './module/mobile-menu';
 import formValidation from './module/form-validation';
 import search from './module/search';
@@ -24,6 +24,9 @@ window.onload = () => {
   const modals = document.querySelectorAll(`[${SELECTOR.modalWindowTrigger}]`);
   if (modals) modals.forEach(modal => modal.addEventListener('click', handleModalVisibility));
 
+  console.debug(modalsJson);
+
+  const modalsData = typeof modalsJson !== 'object' ? JSON.parse(modalsJson) : modalsJson;
   const modalTermsAndPrivacyContent = {...modalsData.modalTermsAndPrivacy};
   const modalTermsAndPrivacyAttrs = [{
     id: SELECTOR.modalTermsAndPrivacyId,
