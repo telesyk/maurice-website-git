@@ -23,14 +23,13 @@ window.onload = () => {
   /* Add Event.click for every modal trigger */
   const modals = document.querySelectorAll(`[${SELECTOR.modalWindowTrigger}]`);
   if (modals) modals.forEach(modal => modal.addEventListener('click', handleModalVisibility));
-
-  console.debug(modalsJson);
-
   const modalsData = typeof modalsJson !== 'object' ? JSON.parse(modalsJson) : modalsJson;
+
+  /* Modal for Terms and Privacy */
   const modalTermsAndPrivacyContent = {...modalsData.modalTermsAndPrivacy};
-  const modalTermsAndPrivacyAttrs = [{
+  const modalTermsAndPrivacyAttrs = {
     id: SELECTOR.modalTermsAndPrivacyId,
-  }];
+  };
   createModal(modalTermsAndPrivacyContent, {attributes: modalTermsAndPrivacyAttrs, modalSize: 'lg'});
 
   /* Scroll by anchor */

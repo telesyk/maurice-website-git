@@ -1,32 +1,27 @@
 import { MODAL } from '../constants';
 import handleModalVisibility from '../helpers/handle-modal-visibility';
 
-/**
- * Modal Sizes
- * - sm - for small - default
- * - lg - for large 
- * */
 const getModalSize = (modalSize) => {
   const sizeObj= MODAL.sizes.find(size => size.name === modalSize);
-
   return !sizeObj ? MODAL.sizes[0].className : sizeObj.className;
 };
 
-/* HeaderTemplate */
 const getHeaderTemplate = (heading) => `
   <header class="modal-header">
     <h2 class="modal-header-title">${heading}</h2>
   </header>
 `;
 
-/* BodyTemplate */
 const getBodyTemplate = (body) => `
   <div class="modal-body">
-    <p>${body}</p>
+    ${body}
   </div>
 `;
 
-/* ModalWindow Template */
+const getIframeTemplate = (url) => `
+  <iframe class="modal-iframe" src="${url}" width="320" height="480"></iframe>
+`;
+
 const getWindowTemplate = (bodyTemplate, headerTemplate) => {
   const modalBody = !headerTemplate 
     ? bodyTemplate
@@ -48,35 +43,50 @@ const getWindowTemplate = (bodyTemplate, headerTemplate) => {
 
 /**
  * Create modal
- * @param {object} content - can has only two variables headerContent & bodyContent
- * @param {string} headerContent - content for header
- * @param {string} bodyContent - content for body
+ * @param {object} content - can has only two variables header & body
+ * @param {string} header - content for header
+ * @param {string} body - content for body
+ * @param {string} pagePath - path to page that will be inserted in <iframe>
  * @param {object} restArgs - can has variables modalSize & attributes
  * @param {string} modalSize - provides a shortant variation of modal size {sm, lg, etc.}
  * @param {array} attributes - may contains an Objects of attributes for the modal
  *  */
 const createModal = (content, restArgs) => {
-  const { headerContent, bodyContent } = content;
-  const modalSize = restArgs ? restArgs.modalSize : null;
-  const attributes = restArgs ? restArgs.attributes : null;
+  const ERROR_TITLE = 'Error in createModal function';
+  if (!content || content === '') return console.error(`${ERROR_TITLE}: content is missed or undefined`);
   
-  if (!bodyContent) return console.log('Error! There are no content to show in modal');
+  const { header, body, pagePath } = content;
+  const modalSize = !restArgs ? null : restArgs.modalSize;
+  const attributes = !restArgs ? null : restArgs.attributes;
+  
+  if (!body && !pagePath) return console.error(`${ERROR_TITLE}: there are no content to show in modal`);
+
+  const pageContentUrl = pagePath
+    ? `${window.location.protocol}//${window.location.host}/${pagePath}`
+    : '';
 
   const parser = new DOMParser();
   const modalClassName = getModalSize(modalSize);
-  const headerTemplate = !headerContent ? null : getHeaderTemplate(headerContent);
-  const bodyTemplate = getBodyTemplate(bodyContent);
+  const headerTemplate = !header ? null : getHeaderTemplate(header);
+  const bodyTemplate = !pageContentUrl ? getBodyTemplate(body) : getIframeTemplate(pageContentUrl);
   const windowTemplate = getWindowTemplate(bodyTemplate, headerTemplate);
   const modalElement = parser.parseFromString(windowTemplate, 'text/html').body.children[0];
   
   modalElement.classList.add(modalClassName);
 
-  if (attributes) {
+  /* In case of attributes (array) */
+  if (attributes && attributes.length) {
     attributes.map(attr => {
       for (const name in attr) {
         modalElement.setAttribute(name, attr[name]);
       }
     });
+  }
+  /* In case of single attribute (object) */
+  if (attributes && !attributes.length) {
+    for (const name in attributes) {
+      modalElement.setAttribute(name, attributes[name]);
+    }
   }
   
   const closeElement = modalElement.querySelector('.modal-close');
