@@ -346,6 +346,9 @@ a.navbar-menu-link:hover {
   margin-bottom: 1rem;
   padding: 1rem;
 }
+.section.no-background {
+  background-color: transparent;
+}
 .section p {
   margin-bottom: 1.75rem;
 }
@@ -394,26 +397,23 @@ a.navbar-menu-link:hover {
   height: auto;
   margin: 0 auto;
 }
-.homepage .page-content__title-image {
-  margin-bottom: 4rem;
-}
 body:not(.homepage) .page-content__title-image {
   filter: invert(0.75);
 }
-.page-content__title-description {
+.page-content__heading {
   display: block;
+  margin-bottom: 4rem;
   padding: 20px;
-  color: var(--color-primary);
   background-color: var(--color-primary);
-  font-weight: 100;
+  color: var(--color-white);
+  font-weight: bold;
   font-size: 1.625rem;
   text-decoration: none;
   text-align: center;
-}
-.page-content__title-description a {
-  color: var(--color-white);
-  background-color: transparent;
   line-height: 2;
+}
+.page-content__heading a {
+  background-color: transparent;
 }
 /* END Page Content */
 
