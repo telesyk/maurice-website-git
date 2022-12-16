@@ -49,7 +49,7 @@ const getWindowTemplate = (bodyTemplate, headerTemplate) => {
  * @param {string} pagePath - path to page that will be inserted in <iframe>
  * @param {object} restArgs - can has variables modalSize & attributes
  * @param {string} modalSize - provides a shortant variation of modal size {sm, lg, etc.}
- * @param {array} attributes - may contains an Objects of attributes for the modal
+ * @param {object} attributes - may contains an Objects of attributes for the modal
  *  */
 const createModal = (content, restArgs) => {
   const ERROR_TITLE = 'Error in createModal function';
@@ -74,15 +74,6 @@ const createModal = (content, restArgs) => {
   
   modalElement.classList.add(modalClassName);
 
-  /* In case of attributes (array) */
-  if (attributes && attributes.length) {
-    attributes.map(attr => {
-      for (const name in attr) {
-        modalElement.setAttribute(name, attr[name]);
-      }
-    });
-  }
-  /* In case of single attribute (object) */
   if (attributes && !attributes.length) {
     for (const name in attributes) {
       modalElement.setAttribute(name, attributes[name]);
