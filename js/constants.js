@@ -12,6 +12,8 @@ export const SELECTOR = {
   formSubmit: 'formSubmit',
   formStatus: 'formStatus',
   searchForm: 'searchForm',
+  modalWindowTrigger: 'data-modal-target',
+  modalTermsAndPrivacyId: 'modalTermsAndPrivacy',
 };
 
 export const EMAIL = {
@@ -27,7 +29,8 @@ export const MODAL = {
     {
       name: 'sm',
       className: 'modal-small'
-    },{
+    },
+    {
       name: 'lg',
       className: 'modal-large'
     }
