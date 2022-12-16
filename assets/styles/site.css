@@ -398,7 +398,6 @@ a.navbar-menu-link:hover {
   margin-bottom: 4rem;
 }
 body:not(.homepage) .page-content__title-image {
-  /* temporaly */
   filter: invert(0.75);
 }
 .page-content__title-description {
@@ -407,8 +406,7 @@ body:not(.homepage) .page-content__title-image {
   color: var(--color-primary);
   background-color: var(--color-primary);
   font-weight: 100;
-  font-size: larger;
-  text-transform: uppercase;
+  font-size: 1.625rem;
   text-decoration: none;
   text-align: center;
 }
