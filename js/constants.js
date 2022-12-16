@@ -1,5 +1,6 @@
 export const SELECTOR = {
   mobileMenu: 'hamburger-menu',
+  pageHeader: 'page-header',
   navbar: '.navbar',
   navbarActive: 'is-active',
   contactForm: 'contactForm',
@@ -14,6 +15,7 @@ export const SELECTOR = {
   searchForm: 'searchForm',
   modalWindowTrigger: 'data-modal-target',
   modalTermsAndPrivacyId: 'modalTermsAndPrivacy',
+  scrollTargetAnchor: 'data-scroll-anchor',
 };
 
 export const EMAIL = {

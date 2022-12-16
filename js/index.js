@@ -7,17 +7,14 @@ import createModal from './module/create-modal';
 import handleModalVisibility from './helpers/handle-modal-visibility';
 
 window.onload = () => {
-  /* Mobile Navigation */
   if (document.getElementById(SELECTOR.mobileMenu)) {
     mobileMenu();
   }
-  
-  /* Form validation */
+
   if (document.getElementById(SELECTOR.contactForm)) {
     formValidation();
   }
 
-  /* Search Form */
   if (document.getElementById(SELECTOR.searchForm)) {
     search();
   }
@@ -27,13 +24,23 @@ window.onload = () => {
   const modals = document.querySelectorAll(`[${SELECTOR.modalWindowTrigger}]`);
   if (modals) modals.forEach(modal => modal.addEventListener('click', handleModalVisibility));
 
-  /* Single modal creating */
-  const modalTermsAndPrivacyContent = {
-    headerContent: modalsData.modalTermsAndPrivacy.title,
-    bodyContent: modalsData.modalTermsAndPrivacy.description,
-  };
+  const modalTermsAndPrivacyContent = {...modalsData.modalTermsAndPrivacy};
   const modalTermsAndPrivacyAttrs = [{
     id: SELECTOR.modalTermsAndPrivacyId,
   }];
-  createModal(modalTermsAndPrivacyContent, {attributes: modalTermsAndPrivacyAttrs});
+  createModal(modalTermsAndPrivacyContent, {attributes: modalTermsAndPrivacyAttrs, modalSize: 'lg'});
+
+  /* Scroll by anchor */
+  const anchorElements = document.querySelectorAll(`[${SELECTOR.scrollTargetAnchor}]`);
+
+  anchorElements.forEach(element => {
+    const headerHeight = document.querySelector(`.${SELECTOR.pageHeader}`).clientHeight;
+    element.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetElement = document.querySelector(element.hash);
+      const targetTop = targetElement.offsetTop - headerHeight - (headerHeight * 0.25);
+      
+      window.scroll({top: targetTop, left: 0, behavior: 'smooth'});
+    })
+  });
 };
