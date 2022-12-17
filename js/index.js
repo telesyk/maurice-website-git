@@ -5,6 +5,7 @@ import formValidation from './module/form-validation';
 import search from './module/search';
 import createModal from './module/create-modal';
 import handleModalVisibility from './helpers/handle-modal-visibility';
+import smoothScrollToElement from './module/smooth-scroll-to-element';
 
 window.onload = () => {
   if (document.getElementById(SELECTOR.mobileMenu)) {
@@ -32,17 +33,6 @@ window.onload = () => {
   };
   createModal(modalTermsAndPrivacyContent, {attributes: modalTermsAndPrivacyAttrs, modalSize: 'lg'});
 
-  /* Scroll by anchor */
-  const anchorElements = document.querySelectorAll(`[${SELECTOR.scrollTargetAnchor}]`);
-
-  anchorElements.forEach(element => {
-    const headerHeight = document.querySelector(`.${SELECTOR.pageHeader}`).clientHeight;
-    element.addEventListener('click', (event) => {
-      event.preventDefault();
-      const targetElement = document.querySelector(element.hash);
-      const targetTop = targetElement.offsetTop - headerHeight - (headerHeight * 0.25);
-      
-      window.scroll({top: targetTop, left: 0, behavior: 'smooth'});
-    })
-  });
+  /* Scroll by anchor; smooth-trogger [data-scroll-anchor] */
+  smoothScrollToElement();
 };
