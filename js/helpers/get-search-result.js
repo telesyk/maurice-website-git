@@ -1,4 +1,4 @@
-const getSearchResult = (searchParams, searchData) => {
+const getSearchResultData = (searchParams, searchData) => {
   return searchParams.map(param => {
     const currentSearchData = searchData.find(data => data.id === param.ref);
 
@@ -9,4 +9,4 @@ const getSearchResult = (searchParams, searchData) => {
   });
 };
 
-export default getSearchResult;
+export default getSearchResultData;

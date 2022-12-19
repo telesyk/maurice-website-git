@@ -13,9 +13,13 @@ export const SELECTOR = {
   formSubmit: 'formSubmit',
   formStatus: 'formStatus',
   searchForm: 'searchForm',
-  modalWindowTrigger: 'data-modal-target',
+  modalTrigger: 'data-modal-target',
+  modalBody: 'modal-body',
+  modalHeader: 'modal-header',
   modalTermsAndPrivacyId: 'modalTermsAndPrivacy',
   scrollTargetAnchor: 'data-scroll-anchor',
+  modalSearchId: 'modalSearch',
+  modalSearchFormId: 'modalSearchForm',
 };
 
 export const EMAIL = {

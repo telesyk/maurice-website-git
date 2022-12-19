@@ -12,17 +12,9 @@ window.onload = () => {
     mobileMenu();
   }
 
-  if (document.getElementById(SELECTOR.contactForm)) {
-    formValidation();
-  }
-
-  if (document.getElementById(SELECTOR.searchForm)) {
-    search();
-  }
-
   /* Modals */
   /* Add Event.click for every modal trigger */
-  const modals = document.querySelectorAll(`[${SELECTOR.modalWindowTrigger}]`);
+  const modals = document.querySelectorAll(`[${SELECTOR.modalTrigger}]`);
   if (modals) modals.forEach(modal => modal.addEventListener('click', handleModalVisibility));
   const modalsData = typeof modalsJson !== 'object' ? JSON.parse(modalsJson) : modalsJson;
 
@@ -33,6 +25,34 @@ window.onload = () => {
   };
   createModal(modalTermsAndPrivacyContent, {attributes: modalTermsAndPrivacyAttrs, modalSize: 'lg'});
 
+  /* Search Modal */
+  const modalSearchFieldTemplate = `
+    <div class="modal-search-field search-form">
+      <label for="modalSearchForm" class="search-form-label" hidden aria-hidden="true">Search</label>
+      <input id="modalSearchForm" class="form-control search-form-field" type="text" placeholder="Search.." />
+    </div>
+  `;
+  const searchModalArgs = {
+    attributes: {
+      id: SELECTOR.modalSearchId,
+    },
+    modalSize: 'lg'
+  }
+  const searchModalContent = {
+    header: modalSearchFieldTemplate,
+    body: 'Let\'s start to search'
+  };
+  createModal(searchModalContent, {...searchModalArgs});
+  /* END Modals */
+
   /* Scroll by anchor; smooth-trogger [data-scroll-anchor] */
   smoothScrollToElement();
+
+  if (document.getElementById(SELECTOR.contactForm)) {
+    formValidation();
+  }
+
+  if (document.getElementById(SELECTOR.searchForm)) {
+    search();
+  }
 };

@@ -5,8 +5,8 @@ const handleModalVisibility = (event) => {
   
   const { target } = event;
 
-  const modalWindow = target.hasAttribute(SELECTOR.modalWindowTrigger)
-    ? document.getElementById(target.getAttribute(SELECTOR.modalWindowTrigger))
+  const modalWindow = target.hasAttribute(SELECTOR.modalTrigger)
+    ? document.getElementById(target.getAttribute(SELECTOR.modalTrigger))
     : target.closest('.modal');
 
   if (modalWindow.dataset.hidden === 'false') {
