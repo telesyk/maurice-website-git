@@ -8,7 +8,7 @@ const resultItemTemplate = (item) => {
   return `
     <div class="modal-search-item">
       <h4 class="modal-search-item__title">
-        <a href="${item.link}">${item.name}</a>
+        <a href="${item.link}" title="${item.name}">${item.name}</a>
       </h4>
       <p class="modal-search-item__short-text">${item.text}</p>
     </div>

@@ -499,9 +499,13 @@ div.news h1 {
 }
 /* END Search */
 /* Modal Search */
-.modal-search-list {}
-.modal-search-item {}
-.modal-search-item__title {}
+.modal-search-item:not(:last-child) {
+  padding-block-end: 0.75rem;
+  border-block-end: 2px solid var(--color-primary);
+}
+.modal-search-item__title a:hover {
+  color: var(--color-secondary);
+}
 .modal-search-item__short-text {  
   --max-lines: 3;
   display: -webkit-box;
