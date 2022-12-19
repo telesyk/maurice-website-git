@@ -705,7 +705,7 @@ div.news h1 {
     --navbar-menu-visibility: 1;
     --navbar-menu-item-padding: 10px 20px;
     --navbar-menu-item-color: var(--color-white);
-    --search-form-field-width: auto;
+    --search-form-field-width: 250px;
   }
   a.navbar-menu-link:hover {
     --navbar-menu-item-color: var(--color-primary);
