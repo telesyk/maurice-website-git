@@ -2,7 +2,7 @@ import lunr from 'lunr';
 import { SELECTOR } from '../constants';
 import dataJson from '../data.json';
 import getSearchData from '../helpers/get-search-data';
-import getSearchResultData from '../helpers/get-search-result';
+import getSearchResultData from '../helpers/get-search-result-data';
 
 const resultItemTemplate = (item) => {
   return `

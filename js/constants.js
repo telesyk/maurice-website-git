@@ -1,8 +1,10 @@
 export const SELECTOR = {
   mobileMenu: 'hamburger-menu',
   pageHeader: 'page-header',
+  pageContent: 'page-content',
   navbar: '.navbar',
-  navbarActive: 'is-active',
+  isFixed: 'is-fixed',
+  isActive: 'is-active',
   contactForm: 'contactForm',
   formGroup: '.form-group',
   formError: 'has-danger',

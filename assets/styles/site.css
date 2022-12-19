@@ -212,6 +212,9 @@ label {
   background-color: var(--color-primary);
   z-index: 1;
 }
+.page-header.is-fixed {
+  box-shadow: 0 5px 25px -10px var(--color-dark);
+}
 .homepage .page-header {
   background-color: var(--color-white);
 }
@@ -383,9 +386,6 @@ a.navbar-menu-link:hover {
 .page-container {
   max-width: var(--size-max-width-desktop);
   margin: 0 auto;
-}
-.page-content {
-  padding-top: var(--page-content-padding-top);
 }
 .page-content__title {
   padding: 3.5rem 0 4rem;

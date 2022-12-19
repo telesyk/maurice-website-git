@@ -6,7 +6,7 @@ export default function mobileMenu() {
   
   function handleMobileMenu(event) {
     event.preventDefault();
-    navbarElement.classList.toggle(SELECTOR.navbarActive);
+    navbarElement.classList.toggle(SELECTOR.isActive);
   }
   
   mobileMenuButton.addEventListener('click', handleMobileMenu);

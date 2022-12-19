@@ -6,6 +6,7 @@ import search from './module/search';
 import createModal from './module/create-modal';
 import handleModalVisibility from './helpers/handle-modal-visibility';
 import smoothScrollToElement from './module/smooth-scroll-to-element';
+import documentOnScroll from './module/document-scroll';
 
 window.onload = () => {
   if (document.getElementById(SELECTOR.mobileMenu)) {
@@ -47,6 +48,8 @@ window.onload = () => {
 
   /* Scroll by anchor; smooth-trogger [data-scroll-anchor] */
   smoothScrollToElement();
+
+  documentOnScroll();
 
   if (document.getElementById(SELECTOR.contactForm)) {
     formValidation();
