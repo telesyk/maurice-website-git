@@ -721,15 +721,6 @@ div.news h1 {
     --navbar-menu-item-color: var(--color-white);
     --navbar-menu-item-color-bg: var(--color-primary);
   }
-  /* .page-footer__search {
-    flex: 0 0 40%;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-  }
-  .page-footer__copyright {
-    flex: 0 0 60%;
-  } */
 }
 
 @media only screen and (min-width: 1200px) {
