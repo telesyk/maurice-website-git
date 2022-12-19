@@ -5,23 +5,17 @@ import formValidation from './module/form-validation';
 import search from './module/search';
 import createModal from './module/create-modal';
 import handleModalVisibility from './helpers/handle-modal-visibility';
+import smoothScrollToElement from './module/smooth-scroll-to-element';
+import documentOnScroll from './module/document-scroll';
 
 window.onload = () => {
   if (document.getElementById(SELECTOR.mobileMenu)) {
     mobileMenu();
   }
 
-  if (document.getElementById(SELECTOR.contactForm)) {
-    formValidation();
-  }
-
-  if (document.getElementById(SELECTOR.searchForm)) {
-    search();
-  }
-
   /* Modals */
   /* Add Event.click for every modal trigger */
-  const modals = document.querySelectorAll(`[${SELECTOR.modalWindowTrigger}]`);
+  const modals = document.querySelectorAll(`[${SELECTOR.modalTrigger}]`);
   if (modals) modals.forEach(modal => modal.addEventListener('click', handleModalVisibility));
   const modalsData = typeof modalsJson !== 'object' ? JSON.parse(modalsJson) : modalsJson;
 
@@ -32,17 +26,36 @@ window.onload = () => {
   };
   createModal(modalTermsAndPrivacyContent, {attributes: modalTermsAndPrivacyAttrs, modalSize: 'lg'});
 
-  /* Scroll by anchor */
-  const anchorElements = document.querySelectorAll(`[${SELECTOR.scrollTargetAnchor}]`);
+  /* Search Modal */
+  const modalSearchFieldTemplate = `
+    <div class="modal-search-field search-form">
+      <label for="modalSearchForm" class="search-form-label" hidden aria-hidden="true">Search</label>
+      <input id="modalSearchForm" class="form-control search-form-field" type="text" placeholder="Search.." />
+    </div>
+  `;
+  const searchModalArgs = {
+    attributes: {
+      id: SELECTOR.modalSearchId,
+    },
+    modalSize: 'lg'
+  }
+  const searchModalContent = {
+    header: modalSearchFieldTemplate,
+    body: 'Let\'s start to search'
+  };
+  createModal(searchModalContent, {...searchModalArgs});
+  /* END Modals */
 
-  anchorElements.forEach(element => {
-    const headerHeight = document.querySelector(`.${SELECTOR.pageHeader}`).clientHeight;
-    element.addEventListener('click', (event) => {
-      event.preventDefault();
-      const targetElement = document.querySelector(element.hash);
-      const targetTop = targetElement.offsetTop - headerHeight - (headerHeight * 0.25);
-      
-      window.scroll({top: targetTop, left: 0, behavior: 'smooth'});
-    })
-  });
+  /* Scroll by anchor; smooth-trogger [data-scroll-anchor] */
+  smoothScrollToElement();
+
+  documentOnScroll();
+
+  if (document.getElementById(SELECTOR.contactForm)) {
+    formValidation();
+  }
+
+  if (document.getElementById(SELECTOR.searchForm)) {
+    search();
+  }
 };

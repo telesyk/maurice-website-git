@@ -3,11 +3,11 @@ import { SELECTOR } from "../constants";
 const handleModalVisibility = (event) => {
   event.preventDefault();
   
-  const { target } = event;
+  const { currentTarget } = event;
 
-  const modalWindow = target.hasAttribute(SELECTOR.modalWindowTrigger)
-    ? document.getElementById(target.getAttribute(SELECTOR.modalWindowTrigger))
-    : target.closest('.modal');
+  const modalWindow = currentTarget.hasAttribute(SELECTOR.modalTrigger)
+    ? document.getElementById(currentTarget.getAttribute(SELECTOR.modalTrigger))
+    : currentTarget.closest('.modal');
 
   if (modalWindow.dataset.hidden === 'false') {
     modalWindow.dataset.hidden = 'true';
