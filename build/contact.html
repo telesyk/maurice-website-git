@@ -1,116 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dr. Maurice Emelu Contact</title>
+    <link rel="stylesheet" href="styles/index.7d969cd9.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("GfqTG6qKrSGn0pk4a");
+      })();
+    </script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Dr. Maurice Emelu Contact</title>
-  <link rel="stylesheet" href="styles/index.7d969cd9.css">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">(function() {emailjs.init("GfqTG6qKrSGn0pk4a")})();</script>
-  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-</head>
+  <body>
+    <header class="page-header">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <img
+            src="images/pages_logo.fe1a5498.svg"
+            alt="mauriceEmelu Logo"
+            class="navbar-logo">
+        </div>
+        <button type="button" class="navbar-mobile-menu" id="hamburger-menu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span aria-hidden="true" hidden="">Menu</span>
+        </button>
+        <ul class="navbar-menu">
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="index.html">Home</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="about.html">About</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="teaching.html">Teaching</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="research.html">Research</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="service.html">Service</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header class="page-header">
-    <nav class="navbar">
-      <div class="navbar-brand">
-        <img src="images/pages_logo.fe1a5498.svg" alt="mauriceEmelu Logo" class="navbar-logo">
+    <main class="page-content">
+      <div class="page-container">
+        <div class="page-content__title">
+          <h1>
+            <img
+              src="images/contact_page.230488e7.svg"
+              alt="maurieemelu_contact"
+              class="page-content__title-image">
+          </h1>
+        </div>
+        <div class="form-container">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="fieldFirstName">First Name</label>
+              <input
+                id="fieldFirstName"
+                type="text"
+                name="firstname"
+                class="form-control"
+                required="">
+            </div>
+            <div class="form-group">
+              <label for="fieldLastName">Last Name</label>
+              <input
+                id="fieldLastName"
+                type="text"
+                name="lastname"
+                class="form-control"
+                required="">
+            </div>
+            <div class="form-group">
+              <label for="fieldOrganization"
+                >Organization (type NA if not applicable)</label
+              >
+              <input
+                id="fieldOrganization"
+                type="text"
+                name="organization"
+                class="form-control"
+                required="">
+            </div>
+            <div class="form-group">
+              <label for="fieldEmail">Email</label>
+              <input
+                id="fieldEmail"
+                type="text"
+                name="email"
+                class="form-control"
+                required="">
+            </div>
+            <div class="form-group is-hidden">
+              <label>
+                Empty Field
+                <input type="text" hidden="">
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="fieldComments">Comments/Reason for Contact</label>
+              <textarea
+                id="fieldComments"
+                rows="10"
+                cols="40"
+                name="comments"
+                class="form-control"
+                required=""
+              ></textarea>
+            </div>
+            <div class="form-group form-buttons">
+              <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+              <button
+                id="formSubmit"
+                type="submit"
+                class="button button-border"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+          <div id="formStatus"></div>
+        </div>
       </div>
-      <button type="button" class="navbar-mobile-menu" id="hamburger-menu">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span aria-hidden="true" hidden="">Menu</span>
-      </button>
-      <ul class="navbar-menu">
-        <li class="navbar-menu-item">
-          <a class="navbar-menu-link" href="index.html">Home</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-menu-link" href="about.html">About</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-menu-link" href="teaching.html">Teaching</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-menu-link" href="research.html">Research</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-menu-link" href="service.html">Service</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-menu-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    </main>
 
-  <main class="page-content">
-    <div class="page-container">
-      <div class="page-content__title">
-        <img src="images/contact_page.230488e7.svg" alt="maurieemelu_courses" class="page-content__title-image">
+    <footer class="page-footer">
+      <div class="page-footer__search search-form">
+        <label
+          for="searchForm"
+          class="search-form-label"
+          hidden=""
+          aria-hidden="true"
+          >Search</label
+        >
+        <input
+          id="searchForm"
+          class="form-control search-form-field"
+          type="text"
+          placeholder="Search..">
       </div>
-      <div class="form-container">
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="fieldFirstName">First Name</label>
-            <input id="fieldFirstName" type="text" name="firstname" class="form-control" required="">
-          </div>
-          <div class="form-group">
-            <label for="fieldLastName">Last Name</label>
-            <input id="fieldLastName" type="text" name="lastname" class="form-control" required="">
-          </div>
-          <div class="form-group">
-            <label for="fieldOrganization">Organization (type NA if not applicable)</label>
-            <input id="fieldOrganization" type="text" name="organization" class="form-control" required="">
-          </div>
-          <div class="form-group">
-            <label for="fieldEmail">Email</label>
-            <input id="fieldEmail" type="text" name="email" class="form-control" required="">
-          </div>
-          <div class="form-group is-hidden">
-            <label>
-              Empty Field
-              <input type="text" hidden="">
-            </label>
-          </div>
-          <div class="form-group">
-            <label for="fieldComments">Comments/Reason for Contact</label>
-            <textarea id="fieldComments" rows="10" cols="40" name="comments" class="form-control" required=""></textarea>
-          </div>
-          <div class="form-group form-buttons">
-            <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
-            <button id="formSubmit" type="submit" class="button button-border">Submit</button>
-          </div>
-        </form>
-        <div id="formStatus"></div>
+      <div class="page-footer__copyright">
+        <p>
+          News, articles, and creative works from
+          <a href="research.html"
+            >Dr. Maurice Emelu are regularly updated on Research page</a
+          >
+        </p>
+        <p>
+          © 2022 Maurice Emelu <br>
+          Academic correspondences, please email
+          <a href="mailto:memelu@jcu.edu">memelu@jcu.edu</a>. Other inquiries,
+          please fill the <a href="contact.html"> Contact Form</a>
+        </p>
+        <p>
+          <a
+            href="#"
+            title="open modal"
+            data-modal-target="modalTermsAndPrivacy"
+            >Terms and Privacy Policies</a
+          >
+        </p>
       </div>
-    </div>
-  </main>
+    </footer>
 
-  <footer class="page-footer">
-    <div class="page-footer__search search-form">
-      <label for="searchForm" class="search-form-label" hidden="" aria-hidden="true">Search</label>
-      <input id="searchForm" class="form-control search-form-field" type="text" placeholder="Search..">
-    </div>
-    <div class="page-footer__copyright">
-      <p>
-        News, articles, and creative works from
-        <a href="research.html">Dr. Maurice Emelu RSS are regularly updated on Research page</a>
-      </p>
-      <p>
-        © 2022 Maurice Emelu <br>
-        Academic correspondences, please email <a href="mailto:memelu@jcu.edu">memelu@jcu.edu</a>. Other inquiries, please
-        fill the <a href="contact.html"> Contact Form</a>
-      </p>
-      <p><a href="#" title="open modal" data-modal-target="modalTermsAndPrivacy">Terms and Privacy Policies</a></p>
-    </div>
-  </footer>
-
-  <!-- All the JavaScript functionality -->
-  <script src="script/index.5326d5bb.js"></script>
-</body>
-
+    <!-- All the JavaScript functionality -->
+    <script src="script/index.5326d5bb.js"></script>
+  </body>
 </html>

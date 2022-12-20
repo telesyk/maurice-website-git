@@ -350,6 +350,13 @@ a.navbar-menu-link:hover {
   background-color: var(--color-white);
 }
 
+.homepage .button-more-2 {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  font-size: 20px;
+  padding: .5rem;
+}
+
 .learn-more .button-more:hover {
   color: var(--color-white);
   border-color: var(--color-white);
@@ -635,6 +642,8 @@ div.news h1 {
 
 .research-item {
   margin: 0;
+  font-size: 25px;
+  color: #3d4f73;
 }
 
 .research-link {

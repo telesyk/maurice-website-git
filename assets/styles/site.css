@@ -12,10 +12,11 @@
   --basic-transition-function: ease-in-out;
   --basic-transition-duration: 0.15s;
   --basic-gap: 1rem;
-  --size-max-width-desktop: 1440px;
-  --header-height: 137.5px;
-  --page-content-padding-top: var(--header-height);
-  --footer-flex-direction: column;
+  --link-color: var(--color-secondary);
+  --size-width-max-desktop: 1440px;
+  --page-header-height: 137.5px;
+  --page-content-padding-top: var(--page-header-height);
+  --page-footer-flex-direction: column;
   --section-embed-margin: 0 -1rem;
   --navbar-mobile-menu-display: block;
   --navbar-mobile-menu-size: 35px;
@@ -26,7 +27,7 @@
   --navbar-menu-item-padding: 10px 50px;
   --navbar-menu-item-color: var(--color-primary);
   --navbar-menu-item-color-bg: transparent;
-  --search-form-field-width: 100%;
+  --page-footer-search-justify: center;
   --search-button-color: var(--color-lightgrey);
   --form-control-border-color: var(--color-primary);
   --modal-z-index: -1;
@@ -98,6 +99,16 @@ a {
   opacity: 0;
   visibility: hidden;
 }
+.has-success {
+  color: var(--color-success);
+}
+.has-danger {
+  color: var(--color-danger);
+}
+
+.link {
+  color: var(--link-color);
+}
 
 /* Button */
 .button {
@@ -125,6 +136,12 @@ a {
   color: var(--color-white);
   border-color: var(--color-white);
 }
+.button-more-2 {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  font-size: 20px;
+  padding: .5rem;
+}
 .button-border {
   border-width: 2px;
   border-style: solid;
@@ -135,13 +152,6 @@ a {
   color: var(--color-white);
 }
 /* END Button */
-
-.has-success {
-  color: var(--color-success);
-}
-.has-danger {
-  color: var(--color-danger);
-}
 
 /* Forms */
 .form-container {
@@ -207,7 +217,7 @@ label {
 /* Page Header */
 .page-header {
   width: 100%;
-  height: var(--header-height);
+  height: var(--page-header-height);
   position: fixed;
   background-color: var(--color-primary);
   z-index: 1;
@@ -221,7 +231,7 @@ label {
 
 /* Navbar */
 .navbar {
-  max-width: var(--size-max-width-desktop);
+  max-width: var(--size-width-max-desktop);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -357,11 +367,8 @@ a.navbar-menu-link:hover {
 .section p {
   font-size: 1.125rem;
 }
-.section a {
-  color: var(--color-secondary);
-}
-.section a:hover {
-  color: var(--color-primary);
+.section .link:hover {
+  --link-color: var(--color-primary);
   background-color: var(--color-white);
 }
 .section h1,
@@ -384,7 +391,7 @@ a.navbar-menu-link:hover {
   padding-top: var(--page-content-padding-top);
 }
 .page-container {
-  max-width: var(--size-max-width-desktop);
+  max-width: var(--size-width-max-desktop);
   margin: 0 auto;
 }
 .page-content__title {
@@ -401,6 +408,7 @@ body:not(.homepage) .page-content__title-image {
   filter: invert(0.75);
 }
 .page-content__heading {
+  --link-color: var(--color-white);
   display: block;
   margin-bottom: 4rem;
   padding: 20px;
@@ -412,19 +420,18 @@ body:not(.homepage) .page-content__title-image {
   text-align: center;
   line-height: 2;
 }
-.page-content__heading a {
-  background-color: transparent;
-}
 /* END Page Content */
 
 /* Homepage */
 .homepage .section {
   background-color: var(--color-primary);
 }
-.homepage p,
-.homepage .section a,
-.homepage .section a:hover {
+.homepage p {
   color: var(--color-white);
+}
+.homepage .link,
+.homepage .link:hover {
+  --link-color: var(--color-white);
   background-color: transparent;
 }
 /* END Homepage */
@@ -444,7 +451,7 @@ div.news h1 {
 /* Page Footer */
 .page-footer {
   display: flex;
-  flex-direction: var(--footer-flex-direction);
+  flex-direction: var(--page-footer-flex-direction);
   gap: 1.25rem;
   width: auto;
   height: auto;
@@ -460,12 +467,12 @@ div.news h1 {
   padding: 0px;
   color: var(--color-white);
 }
-.page-footer a {
-  color: var(--color-white);
+.page-footer .link {
+  --link-color: var(--color-white);
 }
-.page-footer a:hover {
+.page-footer .link:hover {
+  --link-color: var(--color-primary);
   background-color: var(--color-white);
-  color: var(--color-primary);
 }
 /* END Page Footer */
 
@@ -477,12 +484,17 @@ div.news h1 {
   display: none;
 }
 .search-form-field {
-  width: var(--search-form-field-width);
+  width: 100%;
+}
+.page-footer__search {
+  display: flex;
+  justify-content: var(--page-footer-search-justify);
+  align-items: baseline;
 }
 .page-footer__search-trigger {
   display: flex;
   justify-content: space-between;
-  width: var(--search-form-field-width);
+  width: 250px;
   padding: 10px 20px;
   outline: none;
   border: 2px solid var(--search-button-color);
@@ -633,10 +645,15 @@ div.news h1 {
 }
 .research-item {
   margin: 0;
+  font-size: 1.25rem;
 }
 .research-link {
   display: block;
   padding: 0.375rem 0.5rem;
+  color: var(--color-secondary);
+}
+.research-link:hover {
+  color: var(--color-primary);
 }
 /* END Research List */
 
@@ -670,13 +687,14 @@ div.news h1 {
 @media only screen and (min-width: 480px) {
   :root {
     --section-embed-margin: 0;
-    --modal-width: 480px;
-    --modal-height: 360px;
   }
 }
 @media only screen and (min-width: 640px) {
   :root {
-    --footer-flex-direction: row;
+    --page-footer-flex-direction: row;
+    --page-footer-search-justify: start;
+    --modal-width: 480px;
+    --modal-height: calc(100vh - var(--basic-gap));
   }
   .page-footer__search {
     flex: 0 0 40%;
@@ -689,13 +707,11 @@ div.news h1 {
   }
   .modal-large {
     --modal-width: 640px;
-    --modal-height: 480px;
   }
 }
-@media only screen and (min-width: 640px) and (max-width: 1023.75px) and (orientation: landscape) {
-  .modal-small,
-  .modal-large {
-    --modal-height: calc(100vh - var(--basic-gap));
+@media only screen and (min-width: 768px) and (max-width: 1023.75px) {
+  .modal-container {
+    max-height: var(--modal-width);
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -705,7 +721,12 @@ div.news h1 {
     --navbar-menu-visibility: 1;
     --navbar-menu-item-padding: 10px 20px;
     --navbar-menu-item-color: var(--color-white);
-    --search-form-field-width: 250px;
+    --modal-width: 480px;
+    --modal-height: 360px;
+  }
+  .modal-large {
+    --modal-width: 640px;
+    --modal-height: 480px;
   }
   a.navbar-menu-link:hover {
     --navbar-menu-item-color: var(--color-primary);
