@@ -4,8 +4,10 @@ function $parcel$interopDefault(a) {
 const $a836658f5c3bb8c5$export$c63acf214e1d55ea = {
     mobileMenu: "hamburger-menu",
     pageHeader: "page-header",
+    pageContent: "page-content",
     navbar: ".navbar",
-    navbarActive: "is-active",
+    isFixed: "is-fixed",
+    isActive: "is-active",
     contactForm: "contactForm",
     formGroup: ".form-group",
     formError: "has-danger",
@@ -16,9 +18,13 @@ const $a836658f5c3bb8c5$export$c63acf214e1d55ea = {
     formSubmit: "formSubmit",
     formStatus: "formStatus",
     searchForm: "searchForm",
-    modalWindowTrigger: "data-modal-target",
+    modalTrigger: "data-modal-target",
+    modalBody: "modal-body",
+    modalHeader: "modal-header",
     modalTermsAndPrivacyId: "modalTermsAndPrivacy",
-    scrollTargetAnchor: "data-scroll-anchor"
+    scrollTargetAnchor: "data-scroll-anchor",
+    modalSearchId: "modalSearch",
+    modalSearchFormId: "modalSearchForm"
 };
 const $a836658f5c3bb8c5$export$61171c632678b12e = {
     serviceId: "service_55ll7kj",
@@ -51,7 +57,7 @@ function $9144e6aa73b0df10$export$2e2bcd8739ae039() {
     const mobileMenuButton = document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).mobileMenu);
     function handleMobileMenu(event) {
         event.preventDefault();
-        navbarElement.classList.toggle((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).navbarActive);
+        navbarElement.classList.toggle((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).isActive);
     }
     mobileMenuButton.addEventListener("click", handleMobileMenu);
 }
@@ -2717,30 +2723,113 @@ var $ec4db16c1b55bf34$exports = {};
 
 
 var $bd709b5b0182f4b4$exports = {};
-$bd709b5b0182f4b4$exports = JSON.parse('[{"id":"1","name":"About the Reverend Dr. Maurice Nkem Emelu","text":"Dr. Maurice Emelu is the co-director of the digital marketing & communication strategy graduate program and an assistant professor of communication at the Tim Russert Department of Communication, John Carroll University, Ohio. He leads the digital media track at the John Carroll University communication department and teaches classes on digital media, media theory, brand storytelling through digital content, speech communication, and communication, technology, and society. His research interest and practices are on stories in digital spaces, digital media studies, frame analysis, media and religious communication, media and culture, digital storytelling and design, media aesthetics, human-centered digital design methodologies, web development (front end), and non-linear editing systems. As a first-generation American from Nigeria, he brings diverse perspectives to digital storytelling scholarship and provides cross-cultural educational programs through digital media. He has authored seven books and several scholarly articles. Currently, he is working on two projects: documenting untold stories of minority cultures and understanding the subtleties in how broadcast and cable news frame mass shooting stories on their digital platforms. Similarly, he is developing a special digital course on communicating the gospel, which is designed for faith-based organizations. He serves on two non-profit boards and is a consultant to many for-profit and non-profit organizations in the United States, Africa, and Europe. Also, he is the founder of Gratia Vobis Ministries, a Catholic non-profit that promotes cross-cultural communication and actions. Before joining the teaching academia, he worked in the cable industry as a host, an independent executive producer, producer, and co-director of two teaching series and mini-documentaries for EWTN. He holds a Doctor of Philosophy degree from Liverpool Hope University, UK, with a focus on digital media and religion, a Post-Graduate degree in Journalism from the International Institute of Journalism, a Master\'s degree in Communication Management from John Carroll University, USA, and a triple Bachelor of Arts in Religious Studies (Imo State University, Nigeria), Philosophy, and Theology (Pontifical Urban University, Rome/Seat of Wisdom Major Seminary, Owerri). He is a recipient of the Television Academy Foundation’s Alex Trebek Fellow for 2022, and EDUCAUSE scholar award 2022.","link":"http://localhost:1234/about.html"},{"id":"2","name":"Brand Storytelling Through Content (COM 512)","text":"COM 512 is an ideal course for students who want to master the art of brand storytelling and gain a comprehensive understanding of how to effectively communicate a company\'s brand in today\'s digital environment. This course provides students with the necessary skills and knowledge to create engaging content using a combination of visuals, audio, podcasts, graphic design, and text. Through this course, students will be able to construct compelling stories that represent their organization’s values, strategies, and objectives while ensuring they remain authentic and aligned with their target audiences. By the end of the course, students will acquire a sound foundation in conceptualizing, creating, producing, distributing, and measuring the impact of high-quality content that accurately conveys their organization\'s message. With COM 512 you will learn how to expertly tell your organization\'s story in any digital format!","link":"http://localhost:1234/teaching.html"},{"id":"3","name":"Media Theory (COM 455)","text":"Understanding the theories explaining the role of media for us as individuals and shaping the development of media industries, helps us make wise decisions in our use of media. This course acquaints students with the theorists, theories, and research that help us understand the role of the media in mass communication and media studies—mass media, digital media, social media, and other forms of emerging media such as machine learning and AI technologies. It looks at these in relation to media effects, the human mind, social interactions, culture, economy, politics, and media representations and mediatization (JCU Bulletin). At the end of this course, students will deepen their understanding of theory so they can make better use of media and play a bigger role in the development of new media industries. It is a research and writing course for seniors and is required for communication majors in digital media.","link":"http://localhost:1234/teaching.html"},{"id":"4","name":"Introduction to Digital Media (COM 255)","text":"This course examines the basic technological, technical, social, and cultural features of digital media. It introduces students to the fundamentals of digital media literacy and production. It includes narrative theories to explore how and why people tell stories and the types of digital stories, focusing on audio and visual content design, evaluation, development, creation, and delivery. This introductory level course is designed to equip students for more advanced learning in digital media productions and engagements. Hence, students will be able to produce basic digital stories using audio and video, appropriate for different media platforms.","link":"http://localhost:1234/teaching.html"},{"id":"5","name":"Communication, Technology and Society (COM 140)","text":"Are you a student looking for an educational program that is fascinating, engaging, and fulfilling? Look no further than COM 140: Communication, Technology, and Society. This course meets the John Carroll University core requirement for humanities and is required for Communication majors! It provides students with an immersive learning experience as they critically examine the evolution of media and communication technologies, and their role in society. Begin your journey by immersing yourself in the critical examination of the eight media industries of books, newspapers, magazines, sound, radio, films (moving images), television, and the Internet. As you gain insight into each industry through lectures, discussions, reflective activities, readings and assignments you will improve your knowledge base as well as deepen your understanding of these crucial topics. We will then further this knowledge through exploring current trends in communication technology. From social media to telepresence to digital journalism - this course equips students with essential skills to better understand how communication technology shapes society around us. Gain insight into issues such as media ethics, media law; news broadcasting; mass advertisement; marketing; media effects; changes associated with the digital divide; plus global media culture where conversations go beyond stereotyping issues regardless of gender or race. COM 140 is a revolutionary course that offers learners from every field profound knowledge about communication technology- its implications in society today—and also may preview developments likely to shape our future outcomes in many ways. Sign up now for your place in an extraordinary academic journey!","link":"http://localhost:1234/teaching.html"},{"id":"6","name":"Speech Communication (COM 125)","text":"This course serves as the Oral Foundation competency course for John Carroll University. It features the principles of oral communication, applying communication theory to the preparation and delivery of speeches in informative, argumentative, and persuasive settings with appropriate technology. It employs audience analysis and adaptation to foster development of communication competence, critical analysis, and aesthetic appreciation, all within an ethical framework.","link":"link"}]');
+$bd709b5b0182f4b4$exports = JSON.parse('[{"name":"About the Reverend Dr. Maurice Nkem Emelu","text":"Dr. Maurice Emelu is the co-director of the digital marketing & communication strategy graduate program and an assistant professor of communication at the Tim Russert Department of Communication, John Carroll University, Ohio. He leads the digital media track at the John Carroll University communication department and teaches classes on digital media, media theory, brand storytelling through digital content, speech communication, and communication, technology, and society. His research interest and practices are on stories in digital spaces, digital media studies, frame analysis, media and religious communication, media and culture, digital storytelling and design, media aesthetics, human-centered digital design methodologies, web development (front end), and non-linear editing systems. As a first-generation American from Nigeria, he brings diverse perspectives to digital storytelling scholarship and provides cross-cultural educational programs through digital media. He has authored seven books and several scholarly articles. Currently, he is working on two projects: documenting untold stories of minority cultures and understanding the subtleties in how broadcast and cable news frame mass shooting stories on their digital platforms. Similarly, he is developing a special digital course on communicating the gospel, which is designed for faith-based organizations. He serves on two non-profit boards and is a consultant to many for-profit and non-profit organizations in the United States, Africa, and Europe. Also, he is the founder of Gratia Vobis Ministries, a Catholic non-profit that promotes cross-cultural communication and actions. Before joining the teaching academia, he worked in the cable industry as a host, an independent executive producer, producer, and co-director of two teaching series and mini-documentaries for EWTN. He holds a Doctor of Philosophy degree from Liverpool Hope University, UK, with a focus on digital media and religion, a Post-Graduate degree in Journalism from the International Institute of Journalism, a Master\'s degree in Communication Management from John Carroll University, USA, and a triple Bachelor of Arts in Religious Studies (Imo State University, Nigeria), Philosophy, and Theology (Pontifical Urban University, Rome/Seat of Wisdom Major Seminary, Owerri). He is a recipient of the Television Academy Foundation’s Alex Trebek Fellow for 2022, and EDUCAUSE scholar award 2022.","link":"http://localhost:1234/about.html"},{"name":"Brand Storytelling Through Content (COM 512)","text":"COM 512 is an ideal course for students who want to master the art of brand storytelling and gain a comprehensive understanding of how to effectively communicate a company\'s brand in today\'s digital environment. This course provides students with the necessary skills and knowledge to create engaging content using a combination of visuals, audio, podcasts, graphic design, and text. Through this course, students will be able to construct compelling stories that represent their organization’s values, strategies, and objectives while ensuring they remain authentic and aligned with their target audiences. By the end of the course, students will acquire a sound foundation in conceptualizing, creating, producing, distributing, and measuring the impact of high-quality content that accurately conveys their organization\'s message. With COM 512 you will learn how to expertly tell your organization\'s story in any digital format!","link":"http://localhost:1234/teaching.html"},{"name":"Media Theory (COM 455)","text":"Understanding the theories explaining the role of media for us as individuals and shaping the development of media industries, helps us make wise decisions in our use of media. This course acquaints students with the theorists, theories, and research that help us understand the role of the media in mass communication and media studies—mass media, digital media, social media, and other forms of emerging media such as machine learning and AI technologies. It looks at these in relation to media effects, the human mind, social interactions, culture, economy, politics, and media representations and mediatization (JCU Bulletin). At the end of this course, students will deepen their understanding of theory so they can make better use of media and play a bigger role in the development of new media industries. It is a research and writing course for seniors and is required for communication majors in digital media.","link":"http://localhost:1234/teaching.html"},{"name":"Introduction to Digital Media (COM 255)","text":"This course examines the basic technological, technical, social, and cultural features of digital media. It introduces students to the fundamentals of digital media literacy and production. It includes narrative theories to explore how and why people tell stories and the types of digital stories, focusing on audio and visual content design, evaluation, development, creation, and delivery. This introductory level course is designed to equip students for more advanced learning in digital media productions and engagements. Hence, students will be able to produce basic digital stories using audio and video, appropriate for different media platforms.","link":"http://localhost:1234/teaching.html"},{"name":"Communication, Technology and Society (COM 140)","text":"Are you a student looking for an educational program that is fascinating, engaging, and fulfilling? Look no further than COM 140: Communication, Technology, and Society. This course meets the John Carroll University core requirement for humanities and is required for Communication majors! It provides students with an immersive learning experience as they critically examine the evolution of media and communication technologies, and their role in society. Begin your journey by immersing yourself in the critical examination of the eight media industries of books, newspapers, magazines, sound, radio, films (moving images), television, and the Internet. As you gain insight into each industry through lectures, discussions, reflective activities, readings and assignments you will improve your knowledge base as well as deepen your understanding of these crucial topics. We will then further this knowledge through exploring current trends in communication technology. From social media to telepresence to digital journalism - this course equips students with essential skills to better understand how communication technology shapes society around us. Gain insight into issues such as media ethics, media law; news broadcasting; mass advertisement; marketing; media effects; changes associated with the digital divide; plus global media culture where conversations go beyond stereotyping issues regardless of gender or race. COM 140 is a revolutionary course that offers learners from every field profound knowledge about communication technology- its implications in society today—and also may preview developments likely to shape our future outcomes in many ways. Sign up now for your place in an extraordinary academic journey!","link":"http://localhost:1234/teaching.html"},{"name":"Speech Communication (COM 125)","text":"This course serves as the Oral Foundation competency course for John Carroll University. It features the principles of oral communication, applying communication theory to the preparation and delivery of speeches in informative, argumentative, and persuasive settings with appropriate technology. It employs audience analysis and adaptation to foster development of communication competence, critical analysis, and aesthetic appreciation, all within an ethical framework.","link":"link"}]');
 
 
-function $93483820098bf4a0$export$2e2bcd8739ae039() {
-    console.log("search is here");
-    const searchFormElement = document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).searchForm);
-    function searchParams(param) {
-        const idx = (0, (/*@__PURE__*/$parcel$interopDefault($ec4db16c1b55bf34$exports)))(function() {
-            this.ref("name");
-            this.field("name");
-            this.field("text");
-            (0, (/*@__PURE__*/$parcel$interopDefault($bd709b5b0182f4b4$exports))).forEach(function(doc) {
-                this.add(doc);
-            }, this);
+
+let $a2aa8a31fd94f723$export$4385e60b38654f68 = (bytes)=>crypto.getRandomValues(new Uint8Array(bytes));
+let $a2aa8a31fd94f723$export$a5cee9e955a615e5 = (alphabet, defaultSize, getRandom)=>{
+    let mask = (2 << Math.log(alphabet.length - 1) / Math.LN2) - 1;
+    let step = -~(1.6 * mask * defaultSize / alphabet.length);
+    return (size = defaultSize)=>{
+        let id = "";
+        while(true){
+            let bytes = getRandom(step);
+            let j = step;
+            while(j--){
+                id += alphabet[bytes[j] & mask] || "";
+                if (id.length === size) return id;
+            }
+        }
+    };
+};
+let $a2aa8a31fd94f723$export$62e99e5c9f473d7f = (alphabet, size = 21)=>$a2aa8a31fd94f723$export$a5cee9e955a615e5(alphabet, size, $a2aa8a31fd94f723$export$4385e60b38654f68);
+let $a2aa8a31fd94f723$export$ac4959f4f1338dfc = (size = 21)=>crypto.getRandomValues(new Uint8Array(size)).reduce((id, byte)=>{
+        byte &= 63;
+        if (byte < 36) id += byte.toString(36);
+        else if (byte < 62) id += (byte - 26).toString(36).toUpperCase();
+        else if (byte > 62) id += "-";
+        else id += "_";
+        return id;
+    }, "");
+
+
+const $1660fa8a7b52c37e$var$getSearchData = (data)=>{
+    const dataList = typeof data === "string" ? JSON.parse(data) : data;
+    if (!dataList.length) return console.error("Error: dataList is not an array");
+    return dataList.map((dataItem)=>{
+        return {
+            ...dataItem,
+            id: (0, $a2aa8a31fd94f723$export$ac4959f4f1338dfc)()
+        };
+    });
+};
+var $1660fa8a7b52c37e$export$2e2bcd8739ae039 = $1660fa8a7b52c37e$var$getSearchData;
+
+
+const $89957735a972ce56$var$getSearchResultData = (searchParams, searchData)=>{
+    return searchParams.map((param)=>{
+        const currentSearchData = searchData.find((data)=>data.id === param.ref);
+        return {
+            ...currentSearchData,
+            score: param.score
+        };
+    });
+};
+var $89957735a972ce56$export$2e2bcd8739ae039 = $89957735a972ce56$var$getSearchResultData;
+
+
+const $93483820098bf4a0$var$resultItemTemplate = (item)=>{
+    return `
+    <div class="modal-search-item">
+      <h4 class="modal-search-item__title">
+        <a class="link" href="${item.link}" title="${item.name}">${item.name}</a>
+      </h4>
+      <p class="modal-search-item__short-text">${item.text}</p>
+    </div>
+  `;
+};
+const $93483820098bf4a0$var$getResultTemplate = (results)=>{
+    const resultContainer = (items)=>`<div class="modal-search-list">${items}</div>`;
+    if (results.ok && results.data.length > 0) {
+        const list = results.data.map((item)=>$93483820098bf4a0$var$resultItemTemplate(item));
+        return resultContainer(list.join(""));
+    } else return resultContainer(`No results for "${results.data}"`);
+};
+const $93483820098bf4a0$var$getSearch = (param)=>{
+    const data = (0, $1660fa8a7b52c37e$export$2e2bcd8739ae039)((0, (/*@__PURE__*/$parcel$interopDefault($bd709b5b0182f4b4$exports))));
+    const index = (0, (/*@__PURE__*/$parcel$interopDefault($ec4db16c1b55bf34$exports)))(function() {
+        this.ref("id");
+        this.field("name");
+        this.field("text");
+        data.forEach(function(doc) {
+            this.add(doc);
+        }, this);
+    });
+    if (index.search(param) && index.search(param).length > 0) {
+        const resultData = (0, $89957735a972ce56$export$2e2bcd8739ae039)(index.search(param), data);
+        return $93483820098bf4a0$var$getResultTemplate({
+            data: resultData,
+            ok: true
         });
-        return idx.search(param);
-    }
-    function handleSearchForm(event) {
+    } else return $93483820098bf4a0$var$getResultTemplate({
+        data: param,
+        ok: false
+    });
+};
+function $93483820098bf4a0$export$2e2bcd8739ae039() {
+    const searchFormElement = document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalSearchFormId);
+    const searchModalElement = document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalSearchId);
+    const modalBodyElement = searchModalElement.querySelector(`.${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalBody}`);
+    const handleSearchForm = (event)=>{
         const { target: target  } = event;
-        // console.debug(target.value);
-        // console.debug('press Enter');
-        console.log(searchParams(target.value));
-    }
+        const searchResultElement = $93483820098bf4a0$var$getSearch(target.value);
+        modalBodyElement.innerHTML = searchResultElement;
+    };
     searchFormElement.addEventListener("input", handleSearchForm);
+    searchFormElement.addEventListener("keyup", (e)=>{
+        if (e.key === "Enter") handleSearchForm(e);
+    });
 }
 
 
@@ -2748,8 +2837,8 @@ function $93483820098bf4a0$export$2e2bcd8739ae039() {
 
 const $abb2fb10da1e116f$var$handleModalVisibility = (event)=>{
     event.preventDefault();
-    const { target: target  } = event;
-    const modalWindow = target.hasAttribute((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalWindowTrigger) ? document.getElementById(target.getAttribute((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalWindowTrigger)) : target.closest(".modal");
+    const { currentTarget: currentTarget  } = event;
+    const modalWindow = currentTarget.hasAttribute((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalTrigger) ? document.getElementById(currentTarget.getAttribute((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalTrigger)) : currentTarget.closest(".modal");
     if (modalWindow.dataset.hidden === "false") modalWindow.dataset.hidden = "true";
     else modalWindow.dataset.hidden = "false";
     modalWindow.classList.toggle("modal-is-visible");
@@ -2822,25 +2911,10 @@ var $26acd6e8e9d6b531$export$2e2bcd8739ae039 = $26acd6e8e9d6b531$var$createModal
 
 
 
-window.onload = ()=>{
-    if (document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).mobileMenu)) (0, $9144e6aa73b0df10$export$2e2bcd8739ae039)();
-    if (document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).contactForm)) (0, $cc5b8a6a0bdca51c$export$2e2bcd8739ae039)();
-    if (document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).searchForm)) (0, $93483820098bf4a0$export$2e2bcd8739ae039)();
-    /* Modals */ /* Add Event.click for every modal trigger */ const modals = document.querySelectorAll(`[${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalWindowTrigger}]`);
-    if (modals) modals.forEach((modal)=>modal.addEventListener("click", (0, $abb2fb10da1e116f$export$2e2bcd8739ae039)));
-    const modalsData = typeof (0, (/*@__PURE__*/$parcel$interopDefault($f1b4b316a4790494$exports))) !== "object" ? JSON.parse((0, (/*@__PURE__*/$parcel$interopDefault($f1b4b316a4790494$exports)))) : (0, (/*@__PURE__*/$parcel$interopDefault($f1b4b316a4790494$exports)));
-    /* Modal for Terms and Privacy */ const modalTermsAndPrivacyContent = {
-        ...modalsData.modalTermsAndPrivacy
-    };
-    const modalTermsAndPrivacyAttrs = {
-        id: (0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalTermsAndPrivacyId
-    };
-    (0, $26acd6e8e9d6b531$export$2e2bcd8739ae039)(modalTermsAndPrivacyContent, {
-        attributes: modalTermsAndPrivacyAttrs,
-        modalSize: "lg"
-    });
-    /* Scroll by anchor */ const anchorElements = document.querySelectorAll(`[${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).scrollTargetAnchor}]`);
-    anchorElements.forEach((element)=>{
+
+function $2acb89ca8082d660$var$smoothScrollToElement() {
+    const elements = document.querySelectorAll(`[${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).scrollTargetAnchor}]`);
+    if (elements.length) elements.forEach((element)=>{
         const headerHeight = document.querySelector(`.${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).pageHeader}`).clientHeight;
         element.addEventListener("click", (event)=>{
             event.preventDefault();
@@ -2853,7 +2927,61 @@ window.onload = ()=>{
             });
         });
     });
+}
+var $2acb89ca8082d660$export$2e2bcd8739ae039 = $2acb89ca8082d660$var$smoothScrollToElement;
+
+
+
+const $7627a0893542c934$var$documentOnScroll = ()=>{
+    const headerElement = document.querySelector(`.${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).pageHeader}`);
+    document.addEventListener("scroll", ()=>{
+        const topPosition = window.scrollY;
+        if (topPosition > 1) headerElement.classList.add((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).isFixed);
+        else headerElement.classList.remove((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).isFixed);
+    });
+};
+var $7627a0893542c934$export$2e2bcd8739ae039 = $7627a0893542c934$var$documentOnScroll;
+
+
+window.onload = ()=>{
+    if (document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).mobileMenu)) (0, $9144e6aa73b0df10$export$2e2bcd8739ae039)();
+    /* Modals */ /* Add Event.click for every modal trigger */ const modals = document.querySelectorAll(`[${(0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalTrigger}]`);
+    if (modals) modals.forEach((modal)=>modal.addEventListener("click", (0, $abb2fb10da1e116f$export$2e2bcd8739ae039)));
+    const modalsData = typeof (0, (/*@__PURE__*/$parcel$interopDefault($f1b4b316a4790494$exports))) !== "object" ? JSON.parse((0, (/*@__PURE__*/$parcel$interopDefault($f1b4b316a4790494$exports)))) : (0, (/*@__PURE__*/$parcel$interopDefault($f1b4b316a4790494$exports)));
+    /* Modal for Terms and Privacy */ const modalTermsAndPrivacyContent = {
+        ...modalsData.modalTermsAndPrivacy
+    };
+    const modalTermsAndPrivacyAttrs = {
+        id: (0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalTermsAndPrivacyId
+    };
+    (0, $26acd6e8e9d6b531$export$2e2bcd8739ae039)(modalTermsAndPrivacyContent, {
+        attributes: modalTermsAndPrivacyAttrs,
+        modalSize: "lg"
+    });
+    /* Search Modal */ const modalSearchFieldTemplate = `
+    <div class="modal-search-field search-form">
+      <label for="modalSearchForm" class="search-form-label" hidden aria-hidden="true">Search</label>
+      <input id="modalSearchForm" class="form-control search-form-field" type="text" placeholder="Search.." />
+    </div>
+  `;
+    const searchModalArgs = {
+        attributes: {
+            id: (0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).modalSearchId
+        },
+        modalSize: "lg"
+    };
+    const searchModalContent = {
+        header: modalSearchFieldTemplate,
+        body: "Let's start to search"
+    };
+    (0, $26acd6e8e9d6b531$export$2e2bcd8739ae039)(searchModalContent, {
+        ...searchModalArgs
+    });
+    /* END Modals */ /* Scroll by anchor; smooth-trogger [data-scroll-anchor] */ (0, $2acb89ca8082d660$export$2e2bcd8739ae039)();
+    (0, $7627a0893542c934$export$2e2bcd8739ae039)();
+    if (document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).contactForm)) (0, $cc5b8a6a0bdca51c$export$2e2bcd8739ae039)();
+    if (document.getElementById((0, $a836658f5c3bb8c5$export$c63acf214e1d55ea).searchForm)) (0, $93483820098bf4a0$export$2e2bcd8739ae039)();
 };
 
 
-//# sourceMappingURL=index.5326d5bb.js.map
+//# sourceMappingURL=index.4e7701ec.js.map
